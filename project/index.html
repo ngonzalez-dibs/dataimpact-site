@@ -1,0 +1,2083 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Data Impact Business Solutions — Datos, BI e IA aplicados al negocio</title>
+<meta name="description" content="Desarrollamos soluciones tecnológicas a medida: sistemas de gestión, plataformas web, analítica avanzada e IA aplicada. 12+ años de experiencia en salud, educación, finanzas, retail, construcción y sector público." />
+<meta property="og:title" content="Data Impact Business Solutions" />
+<meta property="og:description" content="Tecnología, datos e IA aplicados a los problemas reales de tu negocio." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://dataimpact.cl" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Data Impact Business Solutions SpA",
+  "url": "https://dataimpact.cl",
+  "email": "ngonzalez@dataimpact.cl",
+  "telephone": "+56 9 4984 8853",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Antonio Bellet 193, Of. 1210",
+    "addressLocality": "Providencia",
+    "addressRegion": "Santiago",
+    "addressCountry": "CL"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Data Impact Business Solutions SpA",
+  "image": "https://dataimpact.cl/logo.png",
+  "url": "https://dataimpact.cl",
+  "telephone": "+56 9 4984 8853",
+  "email": "ngonzalez@dataimpact.cl",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Antonio Bellet 193, Of. 1210",
+    "addressLocality": "Providencia",
+    "addressRegion": "Región Metropolitana",
+    "postalCode": "7500000",
+    "addressCountry": "CL"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": -33.4225, "longitude": -70.6088 },
+  "areaServed": { "@type": "Country", "name": "Chile" },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios Data Impact",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Intelligence & Analítica Aplicada", "description": "Auditoría de fuentes, capa semántica y dashboards ejecutivos en Power BI, Tableau y Looker Studio." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ingeniería de Datos & Integración", "description": "Pipelines, ETL/ELT, APIs e integración entre sistemas con gobierno de datos." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatización de Procesos de Negocio", "description": "Workflows en n8n, Make, Power Automate y Python para liberar horas operativas." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Inteligencia Artificial Aplicada", "description": "Modelos predictivos, clasificación, scoring, NLP y asistentes LLM sobre Azure OpenAI." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Plataformas y Sistemas a Medida", "description": "Sistemas de gestión, plataformas operacionales, aplicaciones full-stack y PWAs." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Asesorías y Consultoría", "description": "Diagnóstico de datos y procesos, arquitectura, acompañamiento técnico y gobierno." } }
+    ]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Trabajan con licitaciones de Mercado Público?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Estamos inscritos en el Registro de Proveedores de ChileCompra y habilitados para contratar con organismos del Estado. Preparamos propuestas técnicas, económicas y documentación exigida por las bases." } },
+    { "@type": "Question", "name": "¿Cuánto demora un dashboard desde cero?", "acceptedAnswer": { "@type": "Answer", "text": "Un MVP con datos conectados y 3-5 indicadores clave toma típicamente entre 3 y 6 semanas. Un ecosistema completo puede extenderse a 3-4 meses." } },
+    { "@type": "Question", "name": "¿Usan cloud, on-prem o ambos?", "acceptedAnswer": { "@type": "Answer", "text": "Ambos. La mayoría de proyectos nuevos van a Azure, Snowflake o BigQuery, pero mantenemos implementaciones on-prem cuando el contexto lo requiere." } },
+    { "@type": "Question", "name": "¿Se hacen cargo del hosting y la operación post-entrega?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, como servicio opcional. Ofrecemos soporte y monitoreo por SLA mensual, o traspaso operativo al equipo interno con documentación y capacitación." } },
+    { "@type": "Question", "name": "¿Trabajan bajo contrato fijo o time & materials?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del alcance. Proyectos definidos van a precio cerrado por fases; acompañamientos continuos funcionan en bloques mensuales." } },
+    { "@type": "Question", "name": "¿Qué pasa con la propiedad del código y los datos?", "acceptedAnswer": { "@type": "Answer", "text": "Todo el código desarrollado a medida queda de propiedad del cliente. Los datos nunca salen de sus ambientes sin autorización explícita. Firmamos NDA al inicio." } },
+    { "@type": "Question", "name": "¿Cuándo conviene IA y cuándo no?", "acceptedAnswer": { "@type": "Answer", "text": "IA conviene con problemas de escala, ambigüedad lingüística o patrones no-obvios. Para reglas claras y cálculos determinísticos, una solución tradicional es más barata, rápida y confiable." } },
+    { "@type": "Question", "name": "¿Cómo se factura?", "acceptedAnswer": { "@type": "Answer", "text": "Emitimos factura electrónica chilena. Para sector público, se emite según la Orden de Compra del portal Mercado Público." } }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --navy: #1F3864;
+    --blue: #2E5597;
+    --blue-soft: #7BA7E1;
+    --blue-wash: #E8EDF5;
+    --ink: #262626;
+    --ink-2: #8C8C8C;
+    --line: #BFBFBF;
+    --line-2: #E5E7EB;
+    --bg: #ffffff;
+    --bg-alt: #F2F2F2;
+    --bg-tint: #F7F9FC;
+    --radius: 4px;
+    --radius-lg: 8px;
+    --container: 1200px;
+    --ease: cubic-bezier(.2,.7,.2,1);
+  }
+
+  [data-theme="dark"] {
+    --navy: #E8EDF5;
+    --blue: #7BA7E1;
+    --blue-soft: #2E5597;
+    --blue-wash: #11224a;
+    --ink: #E8EDF5;
+    --ink-2: #8a96ad;
+    --line: #2a3654;
+    --line-2: #1f2a44;
+    --bg: #0b1324;
+    --bg-alt: #0f1a30;
+    --bg-tint: #0d1628;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "ss01", "cv11";
+    transition: background .3s var(--ease), color .3s var(--ease);
+  }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+
+  .container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
+  @media (max-width: 640px) { .container { padding: 0 20px; } }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--blue);
+    font-weight: 500;
+    margin: 0 0 20px;
+  }
+
+  h1, h2, h3, h4 { font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; margin: 0; color: var(--navy); }
+  h2 { font-size: clamp(32px, 4vw, 48px); letter-spacing: -0.025em; }
+  h3 { font-size: 20px; letter-spacing: -0.01em; }
+  p { margin: 0; }
+
+  /* ============ NAV ============ */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid transparent;
+    transition: background .25s var(--ease), border-color .25s var(--ease);
+  }
+  [data-theme="dark"] .nav { background: rgba(11,19,36,.82); }
+  .nav.scrolled { border-bottom-color: var(--line-2); }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 68px;
+    max-width: var(--container); margin: 0 auto; padding: 0 32px;
+  }
+  @media (max-width: 640px) { .nav-inner { padding: 0 20px; height: 60px; } }
+
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--navy); font-size: 15px; letter-spacing: -0.01em; }
+  .logo-mark {
+    width: 28px; height: 28px;
+    background: var(--navy);
+    border-radius: 5px;
+    position: relative;
+    display: grid; place-items: center;
+  }
+  .logo-mark::before, .logo-mark::after {
+    content: ""; position: absolute; background: var(--blue-soft);
+  }
+  .logo-mark::before { left: 6px; bottom: 6px; width: 3px; height: 8px; }
+  .logo-mark::after  { left: 12px; bottom: 6px; width: 3px; height: 14px; }
+  .logo-mark i {
+    position: absolute; left: 18px; bottom: 6px; width: 3px; height: 11px; background: #fff;
+  }
+
+  .nav-links { display: flex; gap: 28px; font-size: 14px; color: var(--ink-2); }
+  .nav-links a { transition: color .15s var(--ease); }
+  .nav-links a:hover { color: var(--navy); }
+  @media (max-width: 960px) { .nav-links { display: none; } }
+
+  .nav-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--navy); color: #fff;
+    padding: 10px 18px; border-radius: var(--radius);
+    font-size: 14px; font-weight: 500;
+    transition: background .15s var(--ease), transform .15s var(--ease);
+  }
+  [data-theme="dark"] .nav-cta { color: var(--bg); }
+  .nav-cta:hover { background: var(--blue); }
+  .nav-cta svg { transition: transform .2s var(--ease); }
+  .nav-cta:hover svg { transform: translateX(2px); }
+
+  .nav-mobile-toggle {
+    display: none; width: 40px; height: 40px;
+    align-items: center; justify-content: center;
+  }
+  @media (max-width: 960px) {
+    .nav-mobile-toggle { display: inline-flex; }
+    .nav-cta { display: none; }
+  }
+
+  /* ============ Reveal on scroll ============ */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .7s var(--ease), transform .7s var(--ease);
+  }
+  .reveal.in { opacity: 1; transform: none; }
+  .reveal.d1 { transition-delay: .05s; }
+  .reveal.d2 { transition-delay: .12s; }
+  .reveal.d3 { transition-delay: .2s; }
+  .reveal.d4 { transition-delay: .28s; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; }
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    padding: 140px 0 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(var(--line-2) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line-2) 1px, transparent 1px);
+    background-size: 56px 56px;
+    background-position: -1px -1px;
+    mask-image: radial-gradient(ellipse 80% 60% at 70% 40%, #000 0%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 70% 40%, #000 0%, transparent 70%);
+    opacity: .6;
+    pointer-events: none;
+  }
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+  }
+  @media (max-width: 960px) {
+    .hero { padding: 110px 0 60px; }
+    .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 5.2vw, 64px);
+    letter-spacing: -0.035em;
+    line-height: 1.02;
+    margin-bottom: 28px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--blue);
+    position: relative;
+  }
+  .hero-sub {
+    font-size: 18px;
+    color: var(--ink-2);
+    max-width: 560px;
+    line-height: 1.55;
+    margin-bottom: 40px;
+  }
+  .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 22px;
+    border-radius: var(--radius);
+    font-size: 15px; font-weight: 500;
+    transition: all .15s var(--ease);
+    border: 1px solid transparent;
+    white-space: nowrap;
+  }
+  .btn svg { transition: transform .2s var(--ease); }
+  .btn:hover svg { transform: translateX(2px); }
+  .btn-primary { background: var(--navy); color: #fff; }
+  [data-theme="dark"] .btn-primary { color: var(--bg); }
+  .btn-primary:hover { background: var(--blue); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--navy);
+    border-color: var(--line);
+  }
+  .btn-secondary:hover { border-color: var(--navy); background: var(--bg-alt); }
+
+  .hero-meta {
+    margin-top: 48px;
+    display: flex; gap: 40px; flex-wrap: wrap;
+    padding-top: 32px;
+    border-top: 1px solid var(--line-2);
+  }
+  .hero-meta .item { display: flex; flex-direction: column; gap: 2px; }
+  .hero-meta .num { font-size: 24px; font-weight: 600; color: var(--navy); letter-spacing: -0.02em; }
+  .hero-meta .lbl { font-size: 12px; color: var(--ink-2); font-family: 'JetBrains Mono', monospace; letter-spacing: .04em; }
+
+  /* Hero visual */
+  .hero-visual {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    max-width: 520px;
+    width: 100%;
+    margin-left: auto;
+  }
+  @media (max-width: 960px) { .hero-visual { margin: 0 auto; max-width: 420px; } }
+
+  .hv-card {
+    position: absolute;
+    background: var(--bg);
+    border: 1px solid var(--line-2);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.02), 0 24px 48px -20px rgba(31,56,100,.18);
+    padding: 18px;
+  }
+  .hv-main { inset: 0 0 22% 0; }
+  .hv-main-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  .hv-main-header .title { font-size: 13px; font-weight: 500; color: var(--navy); }
+  .hv-dots { display: flex; gap: 4px; }
+  .hv-dots span { width: 7px; height: 7px; border-radius: 50%; background: var(--line); }
+
+  .hv-kpi {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+    margin-bottom: 14px;
+  }
+  .hv-kpi .k {
+    padding: 12px 12px 10px;
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-tint) 100%);
+    border: 1px solid var(--line-2);
+    position: relative;
+    overflow: hidden;
+    display: flex; flex-direction: column; gap: 2px;
+    min-height: 82px;
+  }
+  .hv-kpi .k::before {
+    content: "";
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, var(--blue), var(--blue-soft));
+    opacity: .6;
+  }
+  .hv-kpi .k .v {
+    font-size: clamp(22px, 2.2vw, 28px);
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    font-feature-settings: 'tnum';
+    margin-top: 4px;
+  }
+  .hv-kpi .k .l {
+    font-size: 10.5px;
+    color: var(--ink);
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+    margin-top: auto;
+    padding-top: 6px;
+  }
+  .hv-kpi .k .t {
+    display: inline-flex; align-items: center; gap: 3px;
+    align-self: flex-start;
+    font-size: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    color: var(--blue);
+    background: var(--blue-wash);
+    padding: 2px 6px;
+    border-radius: 3px;
+    letter-spacing: .02em;
+    margin-top: 2px;
+  }
+  [data-theme="dark"] .hv-kpi .k .t { color: var(--blue-soft); background: rgba(123,167,225,.12); }
+
+  .hv-chart { height: 140px; position: relative; }
+  .hv-chart svg { width: 100%; height: 100%; overflow: visible; }
+  .hv-path {
+    fill: none; stroke: var(--blue);
+    stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 2.6s var(--ease) .3s forwards;
+  }
+  .hv-path-fill {
+    fill: var(--blue);
+    opacity: 0;
+    animation: fade 1.4s var(--ease) 2s forwards;
+  }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes fade { to { opacity: .08; } }
+
+  .hv-x {
+    display: flex; justify-content: space-between;
+    margin-top: 10px;
+    font-size: 10px; font-family: 'JetBrains Mono', monospace;
+    color: var(--ink-2);
+  }
+
+  .hv-badge {
+    position: absolute;
+    background: var(--navy); color: #fff;
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    font-size: 12px;
+    display: flex; align-items: center; gap: 10px;
+    box-shadow: 0 16px 32px -16px rgba(31,56,100,.5);
+    animation: floatIn .8s var(--ease) 1s backwards;
+  }
+  [data-theme="dark"] .hv-badge { color: var(--bg); }
+  .hv-badge-bl { bottom: 0; left: 4%; }
+  .hv-badge-tr { top: 4%; right: -6%; background: var(--bg); color: var(--navy); border: 1px solid var(--line-2); }
+  @keyframes floatIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+  }
+  .pulse-dot {
+    width: 8px; height: 8px; border-radius: 50%; background: #4ade80;
+    position: relative;
+  }
+  .pulse-dot::after {
+    content: ""; position: absolute; inset: -4px; border-radius: 50%;
+    border: 2px solid #4ade80; opacity: .5;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0% { transform: scale(.9); opacity: .6; }
+    100% { transform: scale(1.6); opacity: 0; }
+  }
+
+  /* ============ Positioning band ============ */
+  .band {
+    background: var(--bg-alt);
+    padding: 64px 0;
+    border-block: 1px solid var(--line-2);
+  }
+  .band-inner {
+    display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; align-items: center;
+  }
+  @media (max-width: 780px) { .band-inner { grid-template-columns: 1fr; gap: 20px; } }
+  .band h2 { font-size: clamp(24px, 2.6vw, 32px); letter-spacing: -0.02em; }
+  .band p { color: var(--ink-2); max-width: 640px; font-size: 15px; line-height: 1.6; }
+
+  /* ============ Sections ============ */
+  section.sec { padding: 120px 0; }
+  @media (max-width: 780px) { section.sec { padding: 80px 0; } }
+
+  .sec-head { margin-bottom: 64px; max-width: 720px; }
+  .sec-head h2 { margin-bottom: 16px; }
+  .sec-head p { color: var(--ink-2); font-size: 17px; line-height: 1.55; }
+
+  /* Services */
+  .services {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--line-2);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--bg);
+  }
+  @media (max-width: 960px) { .services { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .services { grid-template-columns: 1fr; } }
+  .svc {
+    padding: 36px 32px;
+    border-right: 1px solid var(--line-2);
+    border-bottom: 1px solid var(--line-2);
+    transition: background .2s var(--ease);
+    position: relative;
+  }
+  @media (min-width: 961px) {
+    .svc:nth-child(3n) { border-right: 0; }
+    .svc:nth-child(n+4) { border-bottom: 0; }
+  }
+  @media (min-width: 641px) and (max-width: 960px) {
+    .svc:nth-child(2n) { border-right: 0; }
+    .svc:nth-last-child(-n+2) { border-bottom: 0; }
+  }
+  @media (max-width: 640px) {
+    .svc { border-right: 0; }
+    .svc:last-child { border-bottom: 0; }
+  }
+  .svc:hover { background: var(--bg-tint); }
+  .svc-icon {
+    width: 40px; height: 40px;
+    display: grid; place-items: center;
+    border: 1px solid var(--line-2);
+    border-radius: var(--radius);
+    margin-bottom: 24px;
+    color: var(--blue);
+    background: var(--bg);
+    transition: border-color .2s var(--ease), color .2s var(--ease);
+  }
+  .svc:hover .svc-icon { border-color: var(--blue); }
+  .svc-idx {
+    position: absolute; top: 28px; right: 28px;
+    font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-2);
+    letter-spacing: .04em;
+  }
+  .svc h3 { margin-bottom: 10px; }
+  .svc p { color: var(--ink-2); font-size: 14px; line-height: 1.55; }
+
+  /* Sectors */
+  .sectors {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    background: var(--line-2);
+    border: 1px solid var(--line-2);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+  @media (max-width: 960px) { .sectors { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .sectors { grid-template-columns: 1fr; } }
+  .sector {
+    background: var(--bg);
+    padding: 28px 24px;
+    display: flex; flex-direction: column; gap: 10px;
+    transition: background .15s var(--ease);
+  }
+  .sector:hover { background: var(--bg-tint); }
+  .sector .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: .08em;
+    color: var(--blue); text-transform: uppercase;
+  }
+  .sector h4 { font-size: 16px; font-weight: 600; color: var(--navy); }
+  .sector p { font-size: 13px; color: var(--ink-2); line-height: 1.5; }
+
+  /* Cases */
+  .cases { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  @media (max-width: 780px) { .cases { grid-template-columns: 1fr; } }
+  .case {
+    border: 1px solid var(--line-2);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    background: var(--bg);
+    transition: border-color .2s var(--ease), transform .2s var(--ease);
+    display: flex; flex-direction: column; gap: 18px;
+  }
+  .case:hover { border-color: var(--navy); transform: translateY(-2px); }
+  .case-head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line-2);
+  }
+  .case-sector {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: .06em;
+    color: var(--blue);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .case-num { font-family: 'JetBrains Mono', monospace; color: var(--ink-2); font-size: 11px; }
+  .case-row { display: flex; gap: 14px; }
+  .case-row .lbl {
+    width: 90px; flex-shrink: 0;
+    font-size: 12px; color: var(--ink-2);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: .04em;
+    padding-top: 2px;
+  }
+  .case-row .val { font-size: 14px; line-height: 1.55; color: var(--ink); }
+  .case-row.result .val { color: var(--navy); font-weight: 500; }
+  .case-row.result .val b { color: var(--blue); font-weight: 600; }
+
+  /* Case filters */
+  .case-filters {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin-bottom: 32px;
+  }
+  .cf {
+    padding: 8px 14px;
+    background: var(--bg);
+    border: 1px solid var(--line-2);
+    color: var(--ink-2);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: .04em;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all .15s var(--ease);
+  }
+  .cf:hover { border-color: var(--navy); color: var(--navy); }
+  .cf.on {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: #fff;
+  }
+  [data-theme="dark"] .cf.on { color: var(--bg); }
+  .case.hide {
+    display: none;
+  }
+
+  /* KPI rotator flip */
+  .hv-kpi .k { transition: opacity .3s var(--ease), transform .3s var(--ease); }
+  .hv-kpi .k.flip { opacity: 0; transform: translateY(-4px); }
+
+  /* Methodology */
+  .method-section {
+    background: var(--bg);
+  }
+  .method { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+  @media (max-width: 780px) { .method { grid-template-columns: 1fr; } }
+  .step {
+    padding: 32px 24px 32px 0;
+    border-top: 1px solid var(--line-2);
+    position: relative;
+  }
+  .step::before {
+    content: "";
+    position: absolute; top: -4px; left: 0;
+    width: 8px; height: 8px; background: var(--navy);
+    border-radius: 50%;
+  }
+  .step-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; color: var(--blue); letter-spacing: .08em;
+    margin-bottom: 14px;
+  }
+  .step h3 { margin-bottom: 10px; }
+  .step p { color: var(--ink-2); font-size: 14px; line-height: 1.55; }
+  .method-quote {
+    margin-top: 56px; padding: 40px;
+    background: var(--navy); color: #fff;
+    border-radius: var(--radius-lg);
+    font-size: clamp(20px, 2.4vw, 28px);
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    line-height: 1.3;
+    position: relative;
+    overflow: hidden;
+  }
+  [data-theme="dark"] .method-quote { color: var(--bg); }
+  .method-quote::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 90% 10%, rgba(123,167,225,.25), transparent 50%);
+    pointer-events: none;
+  }
+  .method-quote q { quotes: none; }
+  .method-quote q::before { content: "“ "; opacity: .4; }
+  .method-quote q::after { content: " ”"; opacity: .4; }
+
+  /* Consulting */
+  .consulting-section {
+    background: var(--bg-alt);
+    border-block: 1px solid var(--line-2);
+  }
+  .consulting { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  @media (max-width: 780px) { .consulting { grid-template-columns: 1fr; } }
+  .engage {
+    background: var(--bg);
+    border: 1px solid var(--line-2);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    display: flex; flex-direction: column; gap: 18px;
+    transition: all .2s var(--ease);
+  }
+  .engage:hover { border-color: var(--navy); transform: translateY(-2px); }
+  .engage-tag {
+    display: inline-flex; align-self: flex-start;
+    padding: 4px 10px;
+    background: var(--blue-wash); color: var(--blue);
+    border-radius: 999px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: .08em;
+    font-weight: 500;
+  }
+  [data-theme="dark"] .engage-tag { color: var(--blue-soft); }
+  .engage h3 { margin: 0; }
+  .engage p { font-size: 14px; color: var(--ink-2); line-height: 1.6; }
+  .engage .ideal {
+    font-size: 13px; padding: 12px 14px;
+    background: var(--bg-tint);
+    border-left: 2px solid var(--blue);
+    color: var(--ink);
+    border-radius: 2px;
+  }
+  .consulting-cta {
+    margin-top: 40px; text-align: center;
+  }
+
+  /* Blog */
+  .blog { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  @media (max-width: 780px) { .blog { grid-template-columns: 1fr; } }
+  .post {
+    border: 1px solid var(--line-2);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--bg);
+    transition: border-color .2s var(--ease);
+    display: flex; flex-direction: column;
+  }
+  .post:hover { border-color: var(--navy); }
+  .post-cover {
+    aspect-ratio: 16/10;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--line-2);
+  }
+  .post-cover svg { width: 100%; height: 100%; display: block; }
+  .post-body { padding: 24px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+  .post-meta {
+    display: flex; gap: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--ink-2); letter-spacing: .04em;
+  }
+  .post-meta .dot { color: var(--line); }
+  .post h3 {
+    font-size: 18px; letter-spacing: -0.015em; line-height: 1.25;
+  }
+  .post-excerpt { font-size: 14px; color: var(--ink-2); line-height: 1.55; flex: 1; }
+  .post-link {
+    font-size: 13px; color: var(--blue); font-weight: 500;
+    display: inline-flex; align-items: center; gap: 6px;
+    transition: gap .2s var(--ease);
+  }
+  .post-link:hover { gap: 10px; }
+  .blog-footer { margin-top: 40px; text-align: center; }
+  .blog-footer a {
+    color: var(--navy); font-weight: 500; font-size: 15px;
+    display: inline-flex; align-items: center; gap: 8px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 3px;
+    transition: border-color .15s var(--ease);
+  }
+  .blog-footer a:hover { border-color: var(--navy); }
+
+  /* About */
+  .about-section { background: var(--bg-alt); border-block: 1px solid var(--line-2); }
+  .about { display: grid; grid-template-columns: 1.3fr .9fr; gap: 64px; }
+  @media (max-width: 900px) { .about { grid-template-columns: 1fr; gap: 40px; } }
+  .about-text p { color: var(--ink); font-size: 15px; line-height: 1.7; margin-bottom: 18px; }
+  .about-text p:last-child { margin-bottom: 0; }
+  .about-card {
+    background: var(--bg);
+    border: 1px solid var(--line-2);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    align-self: start;
+  }
+  .about-card h4 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; font-weight: 500;
+    color: var(--ink-2); letter-spacing: .08em;
+    text-transform: uppercase; margin-bottom: 20px;
+  }
+  .about-card dl { margin: 0; display: flex; flex-direction: column; gap: 16px; }
+  .about-card dt { font-size: 11px; color: var(--ink-2); font-family: 'JetBrains Mono', monospace; letter-spacing: .04em; margin-bottom: 4px; }
+  .about-card dd { margin: 0; font-size: 14px; color: var(--navy); font-weight: 500; }
+  .about-card .seals {
+    margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--line-2);
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .about-card .seal {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 13px; color: var(--ink);
+  }
+  .about-card .seal svg { color: var(--blue); flex-shrink: 0; }
+
+  /* Contact */
+  .contact { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; }
+  @media (max-width: 900px) { .contact { grid-template-columns: 1fr; gap: 32px; } }
+  .form {
+    border: 1px solid var(--line-2);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    background: var(--bg);
+  }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  @media (max-width: 520px) { .form-grid { grid-template-columns: 1fr; } }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--ink-2); font-weight: 500;
+  }
+  .field input, .field select, .field textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--line-2);
+    border-radius: var(--radius);
+    background: var(--bg);
+    color: var(--ink);
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color .15s var(--ease), box-shadow .15s var(--ease);
+  }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: 0; border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(31,56,100,.08);
+  }
+  .field textarea { resize: vertical; min-height: 120px; }
+  .field.full { margin-bottom: 16px; }
+  .form .btn-primary { width: 100%; justify-content: center; margin-top: 8px; }
+  .form .btn-primary.sent { background: #15803d; }
+
+  .contact-side { display: flex; flex-direction: column; gap: 24px; }
+  .contact-side h3 { margin-bottom: 8px; }
+  .calendly {
+    border: 1px dashed var(--line);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    background: var(--bg-tint);
+    display: flex; flex-direction: column; gap: 16px;
+  }
+  .calendly-head { display: flex; align-items: center; gap: 12px; }
+  .calendly-head .icon {
+    width: 36px; height: 36px; border-radius: var(--radius);
+    background: var(--navy); color: #fff;
+    display: grid; place-items: center;
+  }
+  [data-theme="dark"] .calendly-head .icon { color: var(--bg); }
+  .calendly-head .t { font-weight: 500; color: var(--navy); font-size: 15px; }
+  .calendly-head .s { font-size: 12px; color: var(--ink-2); }
+  .slots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .slot {
+    padding: 10px 6px;
+    background: var(--bg);
+    border: 1px solid var(--line-2);
+    border-radius: var(--radius);
+    font-size: 12px;
+    text-align: center;
+    color: var(--navy);
+    transition: all .15s var(--ease);
+  }
+  .slot:hover { border-color: var(--navy); background: var(--navy); color: #fff; }
+  [data-theme="dark"] .slot:hover { color: var(--bg); }
+  .slot .d { font-weight: 600; font-size: 13px; }
+  .slot .h { font-family: 'JetBrains Mono', monospace; font-size: 11px; opacity: .7; }
+  .calendly-note {
+    font-size: 11px; color: var(--ink-2); font-family: 'JetBrains Mono', monospace;
+  }
+
+  .contact-direct {
+    border: 1px solid var(--line-2);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .contact-item {
+    display: flex; align-items: center; gap: 14px;
+    padding: 4px 0;
+  }
+  .contact-item svg { color: var(--blue); flex-shrink: 0; }
+  .contact-item .l { font-size: 11px; color: var(--ink-2); font-family: 'JetBrains Mono', monospace; letter-spacing: .04em; }
+  .contact-item .v { font-size: 14px; color: var(--navy); font-weight: 500; }
+  .contact-item:hover .v { color: var(--blue); }
+
+  /* Footer */
+  footer {
+    background: var(--navy);
+    color: #fff;
+    padding: 80px 0 32px;
+  }
+  [data-theme="dark"] footer { background: #05091a; color: var(--ink); }
+  .foot {
+    display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr 1fr; gap: 40px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid rgba(255,255,255,.12);
+  }
+  [data-theme="dark"] .foot { border-bottom-color: var(--line); }
+  @media (max-width: 900px) { .foot { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px) { .foot { grid-template-columns: 1fr; gap: 32px; } }
+  .foot-logo { display: flex; flex-direction: column; gap: 16px; }
+  .foot-logo .logo { color: #fff; }
+  [data-theme="dark"] .foot-logo .logo { color: var(--ink); }
+  .foot-logo .logo-mark { background: #fff; }
+  [data-theme="dark"] .foot-logo .logo-mark { background: var(--blue-soft); }
+  .foot-logo .logo-mark::before { background: var(--navy); }
+  .foot-logo .logo-mark::after { background: var(--navy); }
+  .foot-logo .logo-mark i { background: var(--navy); }
+  .foot-logo p { font-size: 13px; color: rgba(255,255,255,.6); max-width: 260px; line-height: 1.55; }
+
+  .foot h5 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+    color: rgba(255,255,255,.5); font-weight: 500;
+    margin: 0 0 16px;
+  }
+  .foot ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .foot a {
+    font-size: 14px; color: rgba(255,255,255,.85);
+    transition: color .15s var(--ease);
+  }
+  .foot a:hover { color: #fff; }
+  [data-theme="dark"] .foot a { color: var(--ink-2); }
+  [data-theme="dark"] .foot a:hover { color: var(--ink); }
+
+  .foot-bottom {
+    padding-top: 32px;
+    display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    font-size: 12px; color: rgba(255,255,255,.55);
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .foot-bottom .social { display: flex; gap: 12px; }
+  .foot-bottom .social a {
+    width: 32px; height: 32px; display: grid; place-items: center;
+    border: 1px solid rgba(255,255,255,.15); border-radius: 6px;
+    transition: all .15s var(--ease);
+  }
+  .foot-bottom .social a:hover { background: #fff; color: var(--navy); border-color: #fff; }
+
+  /* Logo images */
+  .logo { display: inline-flex; align-items: center; text-decoration: none; }
+  .logo-img { height: 26px; width: auto; display: block; }
+  .logo-img-dark { display: none; }
+  [data-theme="dark"] .logo-img-light { display: none; }
+  [data-theme="dark"] .logo-img-dark { display: block; }
+  .foot-logo-img { height: 30px; width: auto; display: block; filter: brightness(0) invert(1); }
+  [data-theme="dark"] .foot-logo-img { filter: none; }
+
+  /* ============ Tweaks panel ============ */
+  #tweaks {
+    position: fixed; right: 20px; bottom: 20px;
+    width: 300px; z-index: 200;
+    background: var(--bg);
+    border: 1px solid var(--line-2);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 24px 60px -20px rgba(0,0,0,.25);
+    padding: 18px;
+    font-size: 13px;
+    display: none;
+  }
+  #tweaks.on { display: block; }
+  #tweaks h4 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--ink-2); font-weight: 500;
+    margin: 0 0 14px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  #tweaks .row { margin-bottom: 14px; }
+  #tweaks .row:last-child { margin-bottom: 0; }
+  #tweaks label {
+    display: block; font-size: 11px; color: var(--ink-2);
+    margin-bottom: 6px; font-family: 'JetBrains Mono', monospace;
+    letter-spacing: .04em;
+  }
+  #tweaks .seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
+  #tweaks .seg button {
+    padding: 8px 4px; font-size: 11px;
+    border: 1px solid var(--line-2); border-radius: var(--radius);
+    color: var(--ink); background: var(--bg);
+    transition: all .15s var(--ease);
+  }
+  #tweaks .seg button.on { background: var(--navy); color: #fff; border-color: var(--navy); }
+  [data-theme="dark"] #tweaks .seg button.on { color: var(--bg); }
+  #tweaks .swatches { display: flex; gap: 6px; }
+  #tweaks .sw {
+    flex: 1; height: 28px; border-radius: var(--radius);
+    cursor: pointer; border: 2px solid transparent;
+    transition: transform .15s var(--ease);
+  }
+  #tweaks .sw.on { border-color: var(--ink); transform: scale(1.05); }
+  #tweaks .h1-opt {
+    width: 100%; text-align: left;
+    padding: 8px 10px; font-size: 12px;
+    border: 1px solid var(--line-2); border-radius: var(--radius);
+    background: var(--bg); color: var(--ink); margin-bottom: 4px;
+    transition: all .15s var(--ease); line-height: 1.3;
+  }
+  #tweaks .h1-opt.on { border-color: var(--navy); background: var(--blue-wash); color: var(--navy); }
+
+</style>
+<style>
+/* ===== Improvements: scroll progress, sticky mobile CTA, stack, ROI, FAQ, mega-footer ===== */
+.scroll-progress { position: fixed; top: 0; left: 0; height: 2px; width: 0; background: var(--blue); z-index: 10000; transition: width .05s linear; }
+[data-theme="dark"] .scroll-progress { background: var(--blue-soft); }
+
+/* Mobile sticky CTA */
+.mobile-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 90; background: var(--bg); border-top: 1px solid var(--line-2); padding: 10px 14px; gap: 8px; box-shadow: 0 -8px 24px rgba(0,0,0,.06); }
+.mobile-cta .btn { flex: 1; justify-content: center; padding: 10px 12px; font-size: 14px; }
+@media (max-width: 720px) { .mobile-cta { display: flex; } main, footer { padding-bottom: 64px; } }
+
+/* Stack section */
+.stack-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 32px; }
+@media (max-width: 860px) { .stack-grid { grid-template-columns: repeat(2, 1fr); } }
+.stack-col { border-left: 2px solid var(--blue); padding: 8px 0 8px 16px; }
+.stack-lbl { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-2); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 10px; }
+.stack-list { list-style: none; margin: 0; padding: 0; }
+.stack-list li { font-size: 14px; padding: 6px 0; border-bottom: 1px solid var(--line-2); color: var(--ink); }
+.stack-list li:last-child { border-bottom: 0; }
+
+/* ROI calculator */
+.roi { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 32px; border: 1px solid var(--line-2); border-radius: 8px; padding: 28px; background: var(--bg); }
+@media (max-width: 780px) { .roi { grid-template-columns: 1fr; padding: 20px; } }
+.roi-inputs { display: flex; flex-direction: column; gap: 20px; }
+.roi-field { display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: var(--ink-2); }
+.roi-field span { font-weight: 500; color: var(--ink); }
+.roi-field input[type=range] { width: 100%; accent-color: var(--blue); }
+.roi-field output { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--navy); align-self: flex-end; }
+.roi-results { background: var(--bg-alt); border-radius: 6px; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+.roi-r { padding: 10px 0; border-bottom: 1px solid var(--line-2); }
+.roi-r:last-of-type { border-bottom: 0; }
+.roi-r .l { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--ink-2); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 4px; }
+.roi-r .v { font-size: 22px; font-weight: 600; color: var(--navy); }
+.roi-r.highlight { background: var(--blue-wash); margin: 8px -20px 0; padding: 14px 20px; border-radius: 4px; border-bottom: 0; }
+.roi-r.highlight .v { color: var(--blue); font-size: 24px; }
+.roi-note { font-size: 11px; color: var(--ink-2); margin: 8px 0 0; font-family: 'JetBrains Mono', monospace; }
+
+/* FAQ */
+.faq-list { display: flex; flex-direction: column; gap: 8px; max-width: 820px; margin: 32px auto 0; }
+.faq-item { border: 1px solid var(--line-2); border-radius: 6px; background: var(--bg); overflow: hidden; }
+.faq-item summary { list-style: none; padding: 16px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 500; color: var(--navy); font-size: 15px; gap: 16px; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary i { width: 14px; height: 14px; position: relative; flex-shrink: 0; }
+.faq-item summary i::before, .faq-item summary i::after { content: ''; position: absolute; background: var(--blue); }
+.faq-item summary i::before { top: 50%; left: 0; right: 0; height: 2px; transform: translateY(-50%); }
+.faq-item summary i::after { left: 50%; top: 0; bottom: 0; width: 2px; transform: translateX(-50%); transition: transform .2s ease; }
+.faq-item[open] summary i::after { transform: translateX(-50%) scaleY(0); }
+.faq-a { padding: 0 20px 18px; color: var(--ink-2); font-size: 14px; line-height: 1.6; }
+
+/* Mega-footer: add sitemap column enhancements */
+footer .foot-col a { display: block; padding: 3px 0; }
+
+@media print {
+  .scroll-progress, .mobile-cta, .roi-field input[type=range] { display: none !important; }
+  .faq-item[open] .faq-a, .faq-a { display: block !important; }
+  .faq-item summary i { display: none !important; }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"¿Trabajan con licitaciones de Mercado Público?","acceptedAnswer":{"@type":"Answer","text":"Sí. Estamos inscritos en el Registro de Proveedores de ChileCompra y habilitados para contratar con organismos del Estado."}},
+    {"@type":"Question","name":"¿Cuánto demora un dashboard desde cero?","acceptedAnswer":{"@type":"Answer","text":"Un MVP con datos conectados y 3-5 indicadores toma entre 3 y 6 semanas. Un ecosistema completo puede extenderse a 3-4 meses."}},
+    {"@type":"Question","name":"¿Usan cloud, on-prem o ambos?","acceptedAnswer":{"@type":"Answer","text":"Ambos. La mayoría de proyectos nuevos van a Azure, Snowflake o BigQuery; mantenemos implementaciones on-prem cuando el contexto lo requiere."}},
+    {"@type":"Question","name":"¿Cuándo conviene IA y cuándo no?","acceptedAnswer":{"@type":"Answer","text":"IA conviene ante escala, ambigüedad lingüística o patrones no-obvios. Para reglas claras, una solución tradicional suele ser más barata y confiable."}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {"@type":"Service","serviceType":"Business Intelligence","provider":{"@type":"Organization","name":"Data Impact Business Solutions SpA"},"areaServed":"CL","description":"Dashboards ejecutivos y operacionales, capa semántica, modelado de datos."},
+    {"@type":"Service","serviceType":"Ingeniería de datos","provider":{"@type":"Organization","name":"Data Impact Business Solutions SpA"},"areaServed":"CL","description":"Pipelines ETL/ELT, integración de sistemas, gobierno de datos."},
+    {"@type":"Service","serviceType":"Inteligencia Artificial Aplicada","provider":{"@type":"Organization","name":"Data Impact Business Solutions SpA"},"areaServed":"CL","description":"Modelos predictivos, NLP, asistentes LLM basados en Azure OpenAI."}
+  ]
+}
+</script>
+
+<style>
+/* Case filters */
+.case-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 20px; justify-content: center; }
+.cf { background: var(--bg); border: 1px solid var(--line-2); color: var(--ink-2); padding: 7px 14px; border-radius: 999px; font-size: 13px; font-weight: 500; cursor: pointer; transition: all .2s; font-family: inherit; }
+.cf:hover { border-color: var(--blue); color: var(--navy); }
+.cf.on { background: var(--navy); border-color: var(--navy); color: #fff; }
+.case.hide { display: none; }
+
+/* Consultoría price line */
+.price-line { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--ink-2); padding: 8px 0; margin: 8px 0 0; border-top: 1px dashed var(--line-2); letter-spacing: .02em; }
+.price-line b { color: var(--navy); font-weight: 600; }
+
+/* Hero KPI rotator anim */
+.hv-kpi .k .v { transition: opacity .35s ease, transform .35s ease; }
+.hv-kpi .k.flip .v { opacity: 0; transform: translateY(-6px); }
+
+@media print {
+  .case-filters { display: none !important; }
+  .case.hide { display: block !important; }
+}
+</style></head>
+<body>
+
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<div class="mobile-cta">
+  <a href="#contacto" class="btn btn-primary">Agendar</a>
+  <a href="#contacto" class="btn btn-secondary">Mensaje</a>
+</div>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo" aria-label="Data Impact Business Solutions">
+      <img src="assets/logo-solutions-dark.png" alt="Data Impact Solutions" class="logo-img logo-img-light" />
+      <img src="assets/logo-solutions-light.png" alt="Data Impact Solutions" class="logo-img logo-img-dark" />
+    </a>
+    <div class="nav-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#sectores">Sectores</a>
+      <a href="#casos">Casos</a>
+      <a href="#metodologia">Metodología</a>
+      <a href="#consultoria">Consultoría</a>
+      <a href="#faq">FAQ</a>
+      <a href="#blog">Blog</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <a href="#contacto" class="nav-cta">
+      Agendar reunión
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+    <button class="nav-mobile-toggle" aria-label="Menú">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow reveal">Data · BI · IA Aplicada</p>
+      <h1 class="reveal d1" id="hero-h1">
+        Datos que se convierten en <em>decisiones</em>.<br>
+        Decisiones que se convierten en resultados.
+      </h1>
+      <p class="hero-sub reveal d2">
+        Desarrollamos soluciones tecnológicas a medida: desde sistemas de gestión y plataformas web hasta analítica avanzada e inteligencia artificial. Más de 12 años del equipo en salud, educación, finanzas, retail, construcción y sector público.
+      </p>
+      <div class="hero-ctas reveal d3">
+        <a class="btn btn-primary" href="#contacto">
+          Agendar reunión
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a class="btn btn-secondary" href="#contacto">
+          Enviar mensaje
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H5.17L4 17.17V4z"/></svg>
+        </a>
+      </div>
+      <div class="hero-meta reveal d4">
+        <div class="item"><span class="num">12+</span><span class="lbl">Años del equipo</span></div>
+        <div class="item"><span class="num">7</span><span class="lbl">Sectores atendidos</span></div>
+        <div class="item"><span class="num">Santiago</span><span class="lbl">Providencia, CL</span></div>
+      </div>
+    </div>
+
+    <!-- Hero visual: animated dashboard + nodes -->
+    <div class="hero-visual reveal d2">
+      <div class="hv-card hv-main">
+        <div class="hv-main-header">
+          <span class="title">Pipeline — Ingresos por sector</span>
+          <div class="hv-dots"><span></span><span></span><span></span></div>
+        </div>
+        <div class="hv-kpi" id="hv-kpi-rotator">
+          <div class="k"><div class="v" data-k="a" style="font-size: 2px">+1.200 h</div><div class="t">▲ por equipo</div><div class="l">SKUs clasificados</div></div>
+          <div class="k"><div class="v" data-k="b">−70%</div><div class="t">▼ vs. manual</div><div class="l">tiempo de reporte</div></div>
+          <div class="k"><div class="v" data-k="c">$14M</div><div class="t">▲ año</div><div class="l">ahorro estimado</div></div>
+        </div>
+        <div class="hv-chart">
+          <svg viewBox="0 0 400 140" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="area" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stop-color="currentColor" stop-opacity=".25"/>
+                <stop offset="100%" stop-color="currentColor" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <!-- gridlines -->
+            <g stroke="var(--line-2)" stroke-width="1">
+              <line x1="0" y1="35" x2="400" y2="35"/>
+              <line x1="0" y1="70" x2="400" y2="70"/>
+              <line x1="0" y1="105" x2="400" y2="105"/>
+            </g>
+            <path class="hv-path-fill" style="color: var(--blue);" d="M 0 110 L 30 95 L 60 100 L 90 80 L 120 85 L 150 65 L 180 70 L 210 50 L 240 55 L 270 35 L 300 40 L 330 25 L 360 30 L 400 15 L 400 140 L 0 140 Z" fill="url(#area)"/>
+            <path class="hv-path" d="M 0 110 L 30 95 L 60 100 L 90 80 L 120 85 L 150 65 L 180 70 L 210 50 L 240 55 L 270 35 L 300 40 L 330 25 L 360 30 L 400 15"/>
+            <!-- points -->
+            <g fill="var(--blue)">
+              <circle cx="90" cy="80" r="2.5"/>
+              <circle cx="210" cy="50" r="2.5"/>
+              <circle cx="330" cy="25" r="2.5"/>
+            </g>
+          </svg>
+        </div>
+        <div class="hv-x"><span>Q1</span><span>Q2</span><span>Q3</span><span>Q4</span></div>
+      </div>
+
+      <div class="hv-badge hv-badge-bl">
+        <span class="pulse-dot"></span>
+        <span>pipeline ejecutándose</span>
+      </div>
+
+      <div class="hv-badge hv-badge-tr">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--blue);"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px;">llm · scoring · etl</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 1b. Positioning band ============ -->
+<section class="band">
+  <div class="container band-inner">
+    <h2 class="reveal">Todo el espectro tecnológico,<br>un solo criterio.</h2>
+    <p class="reveal d1">
+      Construimos sistemas de contabilidad, control de gestión, gestión documental y plataformas web operacionales. También motores de analítica, modelos predictivos y asistentes basados en LLMs. La decisión entre una solución tradicional y una con IA nunca depende de la moda — depende de qué resuelve mejor el problema de negocio.
+    </p>
+  </div>
+</section>
+
+<!-- ============ 2. Services ============ -->
+<section class="sec" id="servicios">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">01 — Servicios</p>
+      <h2>Seis áreas, un mismo estándar de ejecución.</h2>
+      <p>Del descubrimiento del dato al sistema en producción. Elegimos el stack según el problema, no según la moda.</p>
+    </div>
+
+    <div class="services reveal d1">
+      <div class="svc">
+        <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l3-3 3 3 5-5"/></svg></div>
+        <span class="svc-idx">01</span>
+        <h3>Business Intelligence &amp; Analítica Aplicada</h3>
+        <p>Todo el ciclo de BI: desde el descubrimiento y modelado de datos hasta indicadores que cambian decisiones. Auditoría de fuentes, capa semántica y dashboards en Power BI, Tableau y Looker Studio.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg></div>
+        <span class="svc-idx">02</span>
+        <h3>Ingeniería de Datos &amp; Integración</h3>
+        <p>Pipelines, ETL/ELT, APIs e integración entre sistemas. Modelado y gobierno con buenas prácticas. La capa donde los datos dejan de perderse entre Excel, ERPs y ventas.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.2-8.56"/><path d="M21 4v5h-5"/></svg></div>
+        <span class="svc-idx">03</span>
+        <h3>Automatización de Procesos</h3>
+        <p>Workflows en n8n, Make, Power Automate y Python que liberan horas reales de los equipos. Menos copiar-pegar, más análisis.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg></div>
+        <span class="svc-idx">04</span>
+        <h3>Inteligencia Artificial Aplicada</h3>
+        <p>Modelos predictivos, clasificación, scoring, NLP y asistentes basados en LLMs (Azure OpenAI). IA que resuelve un problema concreto, no demos.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <span class="svc-idx">05</span>
+        <h3>Plataformas &amp; Sistemas a Medida</h3>
+        <p>Sistemas de gestión (contabilidad, control de gestión, gestión documental), plataformas operacionales, aplicaciones full-stack (React, Next.js, Node, FastAPI) y PWAs para captura en terreno.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4-8-12V5l8-3 8 3v5c0 8-8 12-8 12z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <span class="svc-idx">06</span>
+        <h3>Asesorías, Consultoría &amp; Apoyo Integral</h3>
+        <p>Diagnóstico de datos y procesos, definición de arquitectura, acompañamiento técnico y gobierno de la información. Ayudamos a decidir qué construir antes de escribir una línea de código.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. Sectors ============ -->
+<section class="sec" id="sectores" style="padding-top: 40px;">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">02 — Sectores</p>
+      <h2>Industrias donde trabajamos hoy.</h2>
+      <p>Cada sector exige distintos criterios de dato, distintas reglas de negocio. Hemos aprendido los de estos siete.</p>
+    </div>
+
+    <div class="sectors reveal d1">
+      <div class="sector">
+        <span class="tag">01 / Healthcare</span>
+        <h4>Salud &amp; Farmacéutica</h4>
+        <p>Soluciones analíticas para laboratorios, clínicas y áreas de medical affairs.</p>
+      </div>
+      <div class="sector">
+        <span class="tag">02 / Education</span>
+        <h4>Educación Superior</h4>
+        <p>Reportería ejecutiva y tableros para escuelas de negocios y universidades.</p>
+      </div>
+      <div class="sector">
+        <span class="tag">03 / Finance</span>
+        <h4>Servicios Financieros</h4>
+        <p>Automatización de reportería comercial y análisis de cartera.</p>
+      </div>
+      <div class="sector">
+        <span class="tag">04 / Retail</span>
+        <h4>Retail</h4>
+        <p>Análisis de ventas, catálogos y operación de tiendas.</p>
+      </div>
+      <div class="sector">
+        <span class="tag">05 / Construction</span>
+        <h4>Construcción &amp; Terreno</h4>
+        <p>Plataformas para control de faenas, logística y reportería gerencial desde el campo.</p>
+      </div>
+      <div class="sector">
+        <span class="tag">06 / Public Sector</span>
+        <h4>Sector Público</h4>
+        <p>Soluciones para organismos del Estado a través de Mercado Público.</p>
+      </div>
+      <div class="sector">
+        <span class="tag">07 / Services</span>
+        <h4>Servicios Profesionales</h4>
+        <p>BI y automatización para empresas de servicios y corporativos.</p>
+      </div>
+      <div class="sector" style="background: var(--bg-tint);">
+        <span class="tag" style="color: var(--ink-2)">+ siguiente</span>
+        <h4 style="color: var(--ink-2)">¿Tu industria?</h4>
+        <p>Si tu sector no está arriba pero el problema es reconocible, probablemente podamos ayudar. Hablemos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. Cases ============ -->
+<section class="sec" id="casos" style="padding-top: 40px;">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">03 — Casos</p>
+      <h2>Proyectos reales, resultados medibles.</h2>
+      <p>Por respeto a la confidencialidad de nuestros clientes, describimos el desafío, la solución y el resultado — sin nombres ni logos.</p>
+    </div>
+
+    <div class="case-filters reveal" id="case-filters">
+      <button class="cf on" data-sector="all">Todos</button>
+      <button class="cf" data-sector="salud">Salud</button>
+      <button class="cf" data-sector="educacion">Educación</button>
+      <button class="cf" data-sector="finanzas">Finanzas</button>
+      <button class="cf" data-sector="construccion">Construcción</button>
+      <button class="cf" data-sector="legal">Legal</button>
+      <button class="cf" data-sector="retail">Retail</button>
+    </div>
+    <div class="cases reveal d1" id="cases-grid">
+      <!-- Case 1 -->
+      <article class="case" data-sector="salud">
+        <div class="case-head">
+          <span class="case-sector">Salud &amp; Farmacéutica</span>
+          <span class="case-num">CASE·001</span>
+        </div>
+        <div class="case-row"><span class="lbl">DESAFÍO</span><span class="val">Clasificación manual de miles de interacciones comerciales mensuales, sin trazabilidad ni consistencia entre equipos.</span></div>
+        <div class="case-row"><span class="lbl">SOLUCIÓN</span><span class="val">Producto analítico de IA con clasificación automatizada, pipeline de NLP y dashboard operacional integrado.</span></div>
+        <div class="case-row result"><span class="lbl">RESULTADO</span><span class="val">Solución <b>adoptada como producto comercial recurrente</b>, con renovaciones anuales y expansión de alcance.</span></div>
+      </article>
+
+      <!-- Case 2 -->
+      <article class="case" data-sector="educacion">
+        <div class="case-head">
+          <span class="case-sector">Educación Superior</span>
+          <span class="case-num">CASE·002</span>
+        </div>
+        <div class="case-row"><span class="lbl">DESAFÍO</span><span class="val">Reportería dispersa entre múltiples fuentes; cada área armaba sus propios números y rara vez coincidían.</span></div>
+        <div class="case-row"><span class="lbl">SOLUCIÓN</span><span class="val">Ecosistema BI ejecutivo consolidado con capa semántica única y tableros específicos por comité.</span></div>
+        <div class="case-row result"><span class="lbl">RESULTADO</span><span class="val">Reportería a <b>comité directivo con datos unificados</b>, sustituyendo tres informes paralelos.</span></div>
+      </article>
+
+      <!-- Case 3 -->
+      <article class="case" data-sector="finanzas">
+        <div class="case-head">
+          <span class="case-sector">Servicios Financieros</span>
+          <span class="case-num">CASE·003</span>
+        </div>
+        <div class="case-row"><span class="lbl">DESAFÍO</span><span class="val">Reportes comerciales armados manualmente cada cierre, con retrasos y errores recurrentes en conciliaciones.</span></div>
+        <div class="case-row"><span class="lbl">SOLUCIÓN</span><span class="val">Automatización end-to-end con Python + Power BI, incluyendo validaciones y reenvío automático por segmento.</span></div>
+        <div class="case-row result"><span class="lbl">RESULTADO</span><span class="val"><b>Ahorro significativo de horas mensuales</b> de analista, reinvertidas en análisis comercial.</span></div>
+      </article>
+
+      <!-- Case 4 -->
+      <article class="case" data-sector="construccion">
+        <div class="case-head">
+          <span class="case-sector">Construcción &amp; Terreno</span>
+          <span class="case-num">CASE·004</span>
+        </div>
+        <div class="case-row"><span class="lbl">DESAFÍO</span><span class="val">Procesos de control de obra dispersos entre Excel, papel y Drive. Sin visibilidad gerencial en tiempo real.</span></div>
+        <div class="case-row"><span class="lbl">SOLUCIÓN</span><span class="val">Plataforma web/móvil full-stack con captura en terreno (PWA), dashboard gerencial e integración contable.</span></div>
+        <div class="case-row result"><span class="lbl">RESULTADO</span><span class="val">Operación centralizada en <b>una sola vista gerencial</b>, con trazabilidad desde faena hasta contabilidad.</span></div>
+      </article>
+
+      <!-- Case 5 -->
+      <article class="case" data-sector="legal">
+        <div class="case-head">
+          <span class="case-sector">Corporativo / Legal</span>
+          <span class="case-num">CASE·005</span>
+        </div>
+        <div class="case-row"><span class="lbl">DESAFÍO</span><span class="val">Consulta manual de documentos internos extensos, con tiempos de búsqueda que dilataban decisiones.</span></div>
+        <div class="case-row"><span class="lbl">SOLUCIÓN</span><span class="val">Asistente IA de búsqueda semántica sobre documentos con Azure OpenAI + Cognitive Search.</span></div>
+        <div class="case-row result"><span class="lbl">RESULTADO</span><span class="val">Respuestas en español con <b>referencias precisas al documento fuente</b>, verificables por el equipo legal.</span></div>
+      </article>
+
+      <!-- Case 6 -->
+      <article class="case" data-sector="retail">
+        <div class="case-head">
+          <span class="case-sector">Retail / Catálogos</span>
+          <span class="case-num">CASE·006</span>
+        </div>
+        <div class="case-row"><span class="lbl">DESAFÍO</span><span class="val">Mapeo manual de descripciones comerciales contra catálogo interno, a escala de miles de SKUs por mes.</span></div>
+        <div class="case-row"><span class="lbl">SOLUCIÓN</span><span class="val">Motor de búsqueda semántica con embeddings vectoriales y flujo de revisión humana por excepción.</span></div>
+        <div class="case-row result"><span class="lbl">RESULTADO</span><span class="val">Más de <b>85% de match automático</b> en catálogos de 10.000+ productos, con revisión focalizada.</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. Methodology ============ -->
+<section class="sec method-section" id="metodologia" style="padding-top: 40px;">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">04 — Metodología</p>
+      <h2>Cómo trabajamos.</h2>
+      <p>Sin metodología inventada: cuatro etapas con entregables claros en cada una. Entras con un problema, sales con una solución que tu equipo usa.</p>
+    </div>
+
+    <div class="method">
+      <div class="step reveal"><span class="step-num">PASO 01</span><h3>Escuchar</h3><p>Entender el problema real antes que la herramienta. A veces la mejor solución no es código.</p></div>
+      <div class="step reveal d1"><span class="step-num">PASO 02</span><h3>Diseñar</h3><p>Arquitectura técnica clara, criterios de éxito medibles, plan por fases.</p></div>
+      <div class="step reveal d2"><span class="step-num">PASO 03</span><h3>Construir</h3><p>Iteraciones cortas con entregables funcionales. Stack elegido según el problema, no según la moda.</p></div>
+      <div class="step reveal d3"><span class="step-num">PASO 04</span><h3>Acompañar</h3><p>Adopción, soporte post-implementación y gobierno. Que la solución efectivamente se use.</p></div>
+    </div>
+
+    <div class="method-quote reveal d1">
+      <q>El valor no está en dominar herramientas, sino en el criterio para elegir la correcta.</q>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. Consulting ============ -->
+<section class="sec consulting-section" id="consultoria">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">05 — Asesorías &amp; Consultoría</p>
+      <h2>Tres formas de trabajar juntos.</h2>
+      <p>No todo proyecto necesita construcción. A veces lo que se necesita es criterio técnico senior, en la dosis justa.</p>
+    </div>
+
+    <div class="consulting">
+      <div class="engage reveal">
+        <span class="engage-tag">◆ puntual</span>
+        <h3>Diagnóstico puntual</h3>
+        <p>Revisión de datos, procesos o arquitectura con entregable ejecutivo. Dos a seis semanas, alcance cerrado.</p>
+        <div class="price-line">desde <b>40 UF</b></div>
+        <div class="ideal">Ideal para <i>“no sabemos por dónde empezar”</i>.</div>
+      </div>
+      <div class="engage reveal d1">
+        <span class="engage-tag">◆ continuo</span>
+        <h3>Acompañamiento continuo</h3>
+        <p>Rol de consultor técnico a tiempo parcial. Revisiones recurrentes, apoyo en decisiones y gobierno.</p>
+        <div class="price-line">desde <b>80 UF / mes</b></div>
+        <div class="ideal">Ideal para equipos internos que necesitan criterio senior sin sumar head-count.</div>
+      </div>
+      <div class="engage reveal d2">
+        <span class="engage-tag">◆ integral</span>
+        <h3>Apoyo integral por proyecto</h3>
+        <p>Desde el diagnóstico hasta la puesta en producción. Un solo responsable, end-to-end.</p>
+        <div class="price-line">desde <b>250 UF</b></div>
+        <div class="ideal">Ideal cuando hace falta que algo llegue en producción, no solo que se diseñe.</div>
+      </div>
+    </div>
+
+    <div class="consulting-cta reveal d2">
+      <a class="btn btn-secondary" href="#contacto">
+        Agendar una conversación de 30 minutos
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. Blog ============ -->
+<section class="sec" id="blog">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">06 — Blog &amp; Recursos</p>
+      <h2>Notas técnicas, sin humo.</h2>
+      <p>Escribimos sobre lo que vemos todos los días — criterios de decisión, errores comunes, y por qué a veces lo simple gana.</p>
+    </div>
+
+    <div class="blog">
+      <article class="post reveal">
+        <div class="post-cover">
+          <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="250" fill="#1F3864"/>
+            <g stroke="rgba(123,167,225,.2)" stroke-width="1">
+              <line x1="0" y1="60" x2="400" y2="60"/>
+              <line x1="0" y1="120" x2="400" y2="120"/>
+              <line x1="0" y1="180" x2="400" y2="180"/>
+            </g>
+            <path d="M 0 180 L 50 150 L 100 165 L 150 120 L 200 130 L 250 80 L 300 95 L 350 55 L 400 70" fill="none" stroke="#7BA7E1" stroke-width="2"/>
+            <path d="M 0 200 L 50 195 L 100 190 L 150 180 L 200 185 L 250 170 L 300 175 L 350 165 L 400 170" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="1.5" stroke-dasharray="3 3"/>
+            <g fill="#7BA7E1"><circle cx="150" cy="120" r="3"/><circle cx="250" cy="80" r="3"/><circle cx="350" cy="55" r="3"/></g>
+          </svg>
+        </div>
+        <div class="post-body">
+          <div class="post-meta"><span>IA APLICADA</span><span class="dot">·</span><span>12 MIN</span></div>
+          <h3>Cuándo IA sí y cuándo IA no: criterios para no gastar en el modelo equivocado.</h3>
+          <p class="post-excerpt">Un árbol de decisión sencillo: si tu problema cabe en una planilla bien pensada, empieza ahí. Por qué empezar por IA es casi siempre un error caro.</p>
+          <a class="post-link" href="#">Leer más →</a>
+        </div>
+      </article>
+
+      <article class="post reveal d1">
+        <div class="post-cover">
+          <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="250" fill="#E8EDF5"/>
+            <g fill="#1F3864">
+              <rect x="40" y="160" width="40" height="60" opacity=".4"/>
+              <rect x="90" y="130" width="40" height="90" opacity=".5"/>
+              <rect x="140" y="100" width="40" height="120" opacity=".6"/>
+              <rect x="190" y="70" width="40" height="150" opacity=".75"/>
+              <rect x="240" y="90" width="40" height="130" opacity=".55"/>
+              <rect x="290" y="60" width="40" height="160"/>
+            </g>
+            <line x1="20" y1="220" x2="360" y2="220" stroke="#1F3864" stroke-width="1.5"/>
+            <circle cx="340" cy="40" r="18" fill="none" stroke="#2E5597" stroke-width="2"/>
+            <path d="M 333 40 L 338 45 L 348 35" stroke="#2E5597" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="post-body">
+          <div class="post-meta"><span>BI &amp; ADOPCIÓN</span><span class="dot">·</span><span>8 MIN</span></div>
+          <h3>Por qué tu dashboard no se usa (y qué hacer al respecto).</h3>
+          <p class="post-excerpt">Dashboards preciosos que nadie abre. Un chequeo de cinco puntos que predice, antes de construir, si el tablero va a vivir o morir.</p>
+          <a class="post-link" href="#">Leer más →</a>
+        </div>
+      </article>
+
+      <article class="post reveal d2">
+        <div class="post-cover">
+          <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="250" fill="#F2F2F2"/>
+            <rect x="40" y="60" width="90" height="130" fill="#fff" stroke="#BFBFBF"/>
+            <g stroke="#8C8C8C" stroke-width="1">
+              <line x1="50" y1="80" x2="120" y2="80"/>
+              <line x1="50" y1="95" x2="120" y2="95"/>
+              <line x1="50" y1="110" x2="120" y2="110"/>
+              <line x1="50" y1="125" x2="120" y2="125"/>
+              <line x1="50" y1="140" x2="120" y2="140"/>
+              <line x1="50" y1="155" x2="120" y2="155"/>
+              <line x1="50" y1="170" x2="120" y2="170"/>
+              <line x1="75" y1="65" x2="75" y2="185"/>
+              <line x1="95" y1="65" x2="95" y2="185"/>
+            </g>
+            <path d="M 160 125 L 220 125" stroke="#1F3864" stroke-width="2" marker-end="url(#arr)" fill="none"/>
+            <defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1F3864"/></marker></defs>
+            <rect x="240" y="60" width="120" height="130" rx="6" fill="#1F3864"/>
+            <rect x="252" y="78" width="40" height="32" rx="2" fill="#7BA7E1" opacity=".5"/>
+            <rect x="296" y="78" width="52" height="32" rx="2" fill="#7BA7E1" opacity=".3"/>
+            <rect x="252" y="118" width="96" height="6" rx="2" fill="rgba(255,255,255,.4)"/>
+            <rect x="252" y="132" width="70" height="6" rx="2" fill="rgba(255,255,255,.3)"/>
+            <rect x="252" y="146" width="80" height="6" rx="2" fill="rgba(255,255,255,.3)"/>
+            <rect x="252" y="164" width="60" height="16" rx="3" fill="#7BA7E1"/>
+          </svg>
+        </div>
+        <div class="post-body">
+          <div class="post-meta"><span>PLATAFORMAS</span><span class="dot">·</span><span>10 MIN</span></div>
+          <h3>De Excel a plataforma: cuándo vale la pena dar el salto.</h3>
+          <p class="post-excerpt">Excel es increíblemente poderoso. Hasta que deja de serlo. Las cinco señales que indican que llegó el momento de construir un sistema real.</p>
+          <a class="post-link" href="#">Leer más →</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="blog-footer reveal">
+      <a href="#">Ver todos los artículos <span>→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7b. About ============ -->
+<section class="sec about-section">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">07 — Sobre Data Impact</p>
+      <h2>Una empresa chilena con antecedentes formales.</h2>
+    </div>
+
+    <div class="about">
+      <div class="about-text">
+        <p class="reveal">DATA IMPACT BUSINESS SOLUTIONS SPA es una empresa chilena especializada en tecnología, analítica de datos y desarrollo de soluciones digitales a medida. La compañía se encuentra respaldada por un equipo profesional con más de 12 años de trayectoria acreditada en el diseño e implementación de soluciones tecnológicas para organizaciones de los sectores salud, educación superior, servicios financieros, retail, construcción y operaciones en terreno.</p>
+        <p class="reveal d1">Nuestra propuesta de valor se fundamenta en la capacidad de traducir requerimientos de negocio en soluciones técnicas concretas, funcionales y sostenibles en el tiempo, asegurando su efectiva adopción por parte de los equipos usuarios y la generación de resultados medibles para la organización.</p>
+        <p class="reveal d2">Las áreas de servicio que la empresa ofrece comprenden: inteligencia de negocios y reportería ejecutiva; ingeniería de datos e integración de sistemas; automatización de procesos de negocio; inteligencia artificial aplicada; y desarrollo de plataformas web y móviles a medida. Todos los servicios se ejecutan aplicando buenas prácticas de gobierno de datos, gestión de accesos y seguridad de la información, en línea con estándares reconocidos de la industria.</p>
+      </div>
+
+      <aside class="about-card reveal d1">
+        <h4>Datos formales</h4>
+        <dl>
+          <div><dt>Razón social</dt><dd>DATA IMPACT BUSINESS SOLUTIONS SPA</dd></div>
+          <div><dt>RUT</dt><dd>78.000.816-4</dd></div>
+          <div><dt>Domicilio fiscal</dt><dd>Antonio Bellet 193, Of. 1210<br>Providencia, Santiago</dd></div>
+        </dl>
+        <div class="seals">
+          <div class="seal">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Inscrito en Registro de Proveedores de ChileCompra</span>
+          </div>
+          <div class="seal">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Proveedor habilitado para organismos del Estado de Chile</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7c. Stack Tecnológico ============ -->
+<section class="sec" id="stack" style="padding-top: 40px; background: var(--bg-alt);">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">07c — Stack tecnológico</p>
+      <h2>Herramientas que usamos, no las que vendemos.</h2>
+      <p>Elegimos según el problema. Estas son las que aparecen con más frecuencia en nuestros proyectos.</p>
+    </div>
+    <div class="stack-grid reveal d1">
+      <div class="stack-col">
+        <div class="stack-lbl">BI &amp; Visualización</div>
+        <ul class="stack-list"><li>Power BI</li><li>Tableau</li><li>Looker Studio</li><li>Metabase</li></ul>
+      </div>
+      <div class="stack-col">
+        <div class="stack-lbl">Datos &amp; Cloud</div>
+        <ul class="stack-list"><li>Azure</li><li>Snowflake</li><li>BigQuery</li><li>PostgreSQL</li><li>dbt</li></ul>
+      </div>
+      <div class="stack-col">
+        <div class="stack-lbl">Desarrollo</div>
+        <ul class="stack-list"><li>React / Next.js</li><li>Node · FastAPI</li><li>Python</li><li>React Native / PWA</li></ul>
+      </div>
+      <div class="stack-col">
+        <div class="stack-lbl">IA &amp; Automatización</div>
+        <ul class="stack-list"><li>Azure OpenAI</li><li>Cognitive Search</li><li>n8n · Make</li><li>Power Automate</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7d. ROI Calculator ============ -->
+<section class="sec" id="calculadora" style="padding-top: 40px;">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">07d — Calculadora</p>
+      <h2>¿Cuántas horas pierdes en reportería manual?</h2>
+      <p>Una estimación rápida de lo que cuesta seguir armando reportes a mano. Ajusta las variables.</p>
+    </div>
+    <div class="roi reveal d1">
+      <div class="roi-inputs">
+        <label class="roi-field">
+          <span>Personas que arman reportes</span>
+          <input type="range" id="roi-people" min="1" max="20" value="3" step="1"/>
+          <output id="roi-people-v">3</output>
+        </label>
+        <label class="roi-field">
+          <span>Horas/semana por persona en reportería</span>
+          <input type="range" id="roi-hours" min="1" max="40" value="8" step="1"/>
+          <output id="roi-hours-v">8</output>
+        </label>
+        <label class="roi-field">
+          <span>Costo hora del analista (CLP)</span>
+          <input type="range" id="roi-rate" min="8000" max="40000" value="18000" step="500"/>
+          <output id="roi-rate-v">$18.000</output>
+        </label>
+      </div>
+      <div class="roi-results">
+        <div class="roi-r"><div class="l">HORAS AL MES</div><div class="v" id="roi-hm">96 h</div></div>
+        <div class="roi-r"><div class="l">COSTO ANUAL</div><div class="v" id="roi-ca">$20.7M</div></div>
+        <div class="roi-r highlight"><div class="l">AHORRO ESTIMADO AL AUTOMATIZAR (70%)</div><div class="v" id="roi-save">$14.5M / año</div></div>
+        <a href="#contacto" class="btn btn-primary" style="margin-top: 16px; width: 100%; justify-content: center;">
+          Evaluar con un especialista
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <p class="roi-note">Cálculo indicativo. Automatizaciones reales suelen lograr 60-85% de reducción.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7e. FAQ ============ -->
+<section class="sec" id="faq" style="padding-top: 40px;">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">07e — Preguntas frecuentes</p>
+      <h2>Lo que suelen preguntarnos antes de empezar.</h2>
+    </div>
+    <div class="faq-list reveal d1">
+      <details class="faq-item"><summary><span>¿Trabajan con licitaciones de Mercado Público?</span><i></i></summary><div class="faq-a">Sí. Estamos inscritos en el Registro de Proveedores de ChileCompra y habilitados para contratar con organismos del Estado. Preparamos propuestas técnicas, económicas y documentación exigida por las bases.</div></details>
+      <details class="faq-item"><summary><span>¿Cuánto demora un dashboard desde cero?</span><i></i></summary><div class="faq-a">Un MVP con datos conectados y 3-5 indicadores clave toma típicamente entre 3 y 6 semanas. Un ecosistema completo con múltiples fuentes, capa semántica y gobierno puede extenderse a 3-4 meses.</div></details>
+      <details class="faq-item"><summary><span>¿Usan cloud, on-prem o ambos?</span><i></i></summary><div class="faq-a">Ambos. La mayoría de proyectos nuevos van a Azure, Snowflake o BigQuery, pero mantenemos y migramos implementaciones on-prem cuando el contexto lo requiere (regulatorio, operacional o de costos).</div></details>
+      <details class="faq-item"><summary><span>¿Se hacen cargo del hosting y la operación post-entrega?</span><i></i></summary><div class="faq-a">Sí, como servicio opcional. Ofrecemos soporte y monitoreo por SLA mensual, o podemos traspasar la operación al equipo interno con documentación y capacitación.</div></details>
+      <details class="faq-item"><summary><span>¿Trabajan bajo contrato fijo o time &amp; materials?</span><i></i></summary><div class="faq-a">Depende del alcance. Proyectos definidos van a precio cerrado por fases. Acompañamientos continuos y consultoría funcionan en bloques mensuales de horas o días.</div></details>
+      <details class="faq-item"><summary><span>¿Qué pasa con la propiedad del código y los datos?</span><i></i></summary><div class="faq-a">Todo el código desarrollado a medida queda de propiedad del cliente. Los datos nunca salen de sus ambientes sin autorización explícita. Firmamos NDA al inicio de cada proyecto.</div></details>
+      <details class="faq-item"><summary><span>¿Cuándo conviene IA y cuándo no?</span><i></i></summary><div class="faq-a">IA conviene cuando el problema es de escala, ambigüedad lingüística o patrones no-obvios. Para reglas claras, cálculos determinísticos o reportería estructurada, una solución tradicional suele ser más barata, rápida y confiable.</div></details>
+      <details class="faq-item"><summary><span>¿Cómo se factura?</span><i></i></summary><div class="faq-a">Emitimos factura electrónica chilena. Para sector público, emitimos según lo establecido en la Orden de Compra del portal Mercado Público.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. Contact ============ -->
+<section class="sec" id="contacto">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">08 — Contacto</p>
+      <h2>Conversemos tu proyecto.</h2>
+      <p>Dos caminos, misma bandeja. Contamos con respuesta dentro de 24 horas hábiles.</p>
+    </div>
+
+    <div class="contact">
+      <!-- Form -->
+      <form class="form reveal" id="contact-form" action="/api/contact" method="post" novalidate>
+        <div class="form-grid">
+          <div class="field"><label>Nombre</label><input name="nombre" required placeholder="Tu nombre"/></div>
+          <div class="field"><label>Email corporativo</label><input name="email" type="email" required placeholder="nombre@empresa.cl"/></div>
+          <div class="field"><label>Empresa</label><input name="empresa" placeholder="Tu empresa"/></div>
+          <div class="field"><label>Cargo</label><input name="cargo" placeholder="Rol o cargo"/></div>
+        </div>
+        <div class="field full">
+          <label>Tipo de consulta</label>
+          <select name="tipo" required>
+            <option value="">Selecciona una opción</option>
+            <option>Nuevo proyecto</option>
+            <option>Asesoría</option>
+            <option>Consultoría</option>
+            <option>Licitación pública</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label>Descripción breve</label>
+          <textarea name="descripcion" placeholder="Cuéntanos en dos o tres líneas qué problema quieres resolver."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submit-btn">
+          <span id="submit-text">Enviar mensaje</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+      </form>
+
+      <!-- Direct -->
+      <div class="contact-side">
+        <div class="calendly reveal d1">
+          <div class="calendly-head">
+            <div class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <div>
+              <div class="t">O agenda directamente</div>
+              <div class="s">Bloques de 30 min · zona horaria CL</div>
+            </div>
+          </div>
+          <div class="slots" id="slots"></div>
+          <div class="calendly-note">// integración calendly · /dataimpact/30min</div>
+        </div>
+
+        <div class="contact-direct reveal d2">
+          <a class="contact-item" href="mailto:ngonzalez@dataimpact.cl">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div><div class="l">EMAIL</div><div class="v">ngonzalez@dataimpact.cl</div></div>
+          </a>
+          <a class="contact-item" href="tel:+56949848853">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+            <div><div class="l">TELÉFONO</div><div class="v">+56 9 4984 8853</div></div>
+          </a>
+          <a class="contact-item" href="#">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <div><div class="l">LINKEDIN</div><div class="v">/company/dataimpact</div></div>
+          </a>
+          <a class="contact-item" href="https://maps.google.com" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><div class="l">OFICINA</div><div class="v">Antonio Bellet 193, Of. 1210 · Providencia</div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="foot">
+      <div class="foot-logo">
+        <a href="#top" class="logo" aria-label="Data Impact Business Solutions">
+          <img src="assets/logo-solutions-light.png" alt="Data Impact Solutions" class="foot-logo-img" />
+        </a>
+        <p>Tecnología, datos e IA aplicados a los problemas reales de tu negocio.</p>
+      </div>
+      <div>
+        <h5>Servicios</h5>
+        <ul>
+          <li><a href="#servicios">Business Intelligence</a></li>
+          <li><a href="#servicios">Ingeniería de Datos</a></li>
+          <li><a href="#servicios">Automatización</a></li>
+          <li><a href="#servicios">IA Aplicada</a></li>
+          <li><a href="#servicios">Plataformas a medida</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Sectores</h5>
+        <ul>
+          <li><a href="#sectores">Salud &amp; Farmacéutica</a></li>
+          <li><a href="#sectores">Educación Superior</a></li>
+          <li><a href="#sectores">Servicios Financieros</a></li>
+          <li><a href="#sectores">Construcción</a></li>
+          <li><a href="#sectores">Sector Público</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Empresa</h5>
+        <ul>
+          <li><a href="#casos">Casos</a></li>
+          <li><a href="#metodologia">Metodología</a></li>
+          <li><a href="#consultoria">Consultoría</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Términos de servicio</a></li>
+          <li><a href="#">Mercado Público</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Data Impact Business Solutions SpA · RUT 78.000.816-4 · Providencia, Santiago, Chile</span>
+      <div class="social">
+        <a href="#" aria-label="LinkedIn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8 19H5V8h3v11zM6.5 6.7A1.8 1.8 0 118.3 4.9a1.8 1.8 0 01-1.8 1.8zM20 19h-3v-5.6c0-3.4-4-3.1-4 0V19h-3V8h3v1.8c1.4-2.6 7-2.8 7 2.5V19z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ Tweaks Panel ============ -->
+<div id="tweaks">
+  <h4>Tweaks <span id="tweaks-close" style="cursor:pointer;font-size:14px;opacity:.5;">×</span></h4>
+
+  <div class="row">
+    <label>Tema</label>
+    <div class="seg" id="theme-seg">
+      <button data-theme-set="light">Claro</button>
+      <button data-theme-set="dark">Oscuro</button>
+      <button data-theme-set="system">Sistema</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <label>Variante H1</label>
+    <button class="h1-opt" data-h1="Datos que se convierten en <em>decisiones</em>.<br>Decisiones que se convierten en resultados.">Datos → decisiones → resultados</button>
+    <button class="h1-opt" data-h1="Tecnología, datos e <em>IA aplicada</em><br>a los problemas reales de tu negocio.">Tecnología, datos e IA aplicada</button>
+    <button class="h1-opt" data-h1="Soluciones de datos, BI e IA<br><em>hechas para adoptarse</em>.">Hechas para adoptarse</button>
+  </div>
+
+  <div class="row">
+    <label>Acento</label>
+    <div class="swatches">
+      <div class="sw" data-accent="#2E5597" style="background:#2E5597"></div>
+      <div class="sw" data-accent="#1F3864" style="background:#1F3864"></div>
+      <div class="sw" data-accent="#0b3a6f" style="background:#0b3a6f"></div>
+      <div class="sw" data-accent="#3b6bb0" style="background:#3b6bb0"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+    "theme": "light",
+    "h1Variant": 1,
+    "accent": "#2E5597"
+  }/*EDITMODE-END*/;
+
+  let state = { ...TWEAK_DEFAULTS };
+
+  // ==== Scroll nav ====
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // ==== Reveal on scroll ====
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // ==== Populate calendar slots ====
+  (() => {
+    const slots = document.getElementById('slots');
+    const days = ['LUN', 'MAR', 'MIÉ', 'JUE', 'VIE', 'LUN'];
+    const dates = ['22', '23', '24', '25', '26', '29'];
+    const times = ['10:00', '11:30', '15:00', '16:30', '10:00', '14:00'];
+    slots.innerHTML = days.map((d,i) =>
+      `<button class="slot" type="button"><div class="d">${d} ${dates[i]}</div><div class="h">${times[i]}</div></button>`
+    ).join('');
+  })();
+
+  // ==== Form ====
+  const form = document.getElementById('contact-form');
+  const btn = document.getElementById('submit-btn');
+  const btnText = document.getElementById('submit-text');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    btn.classList.add('sent');
+    btnText.textContent = 'Mensaje enviado ✓';
+    setTimeout(() => {
+      btn.classList.remove('sent');
+      btnText.textContent = 'Enviar mensaje';
+      form.reset();
+    }, 3200);
+  });
+
+  // ==== Tweaks ====
+  const tweaksPanel = document.getElementById('tweaks');
+  function applyTheme(t) {
+    if (t === 'system') {
+      const mq = window.matchMedia('(prefers-color-scheme: dark)');
+      document.documentElement.setAttribute('data-theme', mq.matches ? 'dark' : 'light');
+    } else {
+      document.documentElement.setAttribute('data-theme', t);
+    }
+    document.querySelectorAll('#theme-seg button').forEach(b => {
+      b.classList.toggle('on', b.dataset.themeSet === t);
+    });
+  }
+  function applyH1(idx) {
+    const opts = document.querySelectorAll('.h1-opt');
+    if (opts[idx]) {
+      document.getElementById('hero-h1').innerHTML = opts[idx].dataset.h1;
+      opts.forEach((o,i) => o.classList.toggle('on', i === idx));
+    }
+  }
+  function applyAccent(color) {
+    document.documentElement.style.setProperty('--blue', color);
+    document.querySelectorAll('.sw').forEach(sw => sw.classList.toggle('on', sw.dataset.accent === color));
+  }
+  function applyAll(s) {
+    applyTheme(s.theme);
+    applyH1(s.h1Variant);
+    applyAccent(s.accent);
+  }
+
+  document.querySelectorAll('#theme-seg button').forEach(b => {
+    b.addEventListener('click', () => {
+      state.theme = b.dataset.themeSet;
+      applyTheme(state.theme);
+      persist();
+    });
+  });
+  document.querySelectorAll('.h1-opt').forEach((b, i) => {
+    b.addEventListener('click', () => {
+      state.h1Variant = i;
+      applyH1(i);
+      persist();
+    });
+  });
+  document.querySelectorAll('.sw').forEach(sw => {
+    sw.addEventListener('click', () => {
+      state.accent = sw.dataset.accent;
+      applyAccent(state.accent);
+      persist();
+    });
+  });
+  document.getElementById('tweaks-close').addEventListener('click', () => {
+    tweaksPanel.classList.remove('on');
+  });
+
+  function persist() {
+    try {
+      window.parent.postMessage({ type: '__edit_mode_set_keys', edits: state }, '*');
+    } catch(e) {}
+  }
+
+  // Edit-mode protocol — register listener first, then announce
+  window.addEventListener('message', (e) => {
+    const d = e.data || {};
+    if (d.type === '__activate_edit_mode') tweaksPanel.classList.add('on');
+    if (d.type === '__deactivate_edit_mode') tweaksPanel.classList.remove('on');
+  });
+  try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch(e) {}
+
+  // Apply initial state
+  applyAll(state);
+
+  // ==== Scroll progress bar ====
+  const prog = document.getElementById('scroll-progress');
+  if (prog) {
+    function upd(){
+      const h = document.documentElement;
+      const pct = (h.scrollTop || document.body.scrollTop) / ((h.scrollHeight - h.clientHeight) || 1) * 100;
+      prog.style.width = Math.max(0, Math.min(100, pct)) + '%';
+    }
+    window.addEventListener('scroll', upd, { passive: true });
+    upd();
+  }
+
+  // ==== ROI calculator ====
+  (function(){
+    const p = document.getElementById('roi-people');
+    const h = document.getElementById('roi-hours');
+    const r = document.getElementById('roi-rate');
+    if (!p || !h || !r) return;
+    const fmtCLP = n => '$' + Math.round(n).toLocaleString('es-CL');
+    const fmtCLPM = n => {
+      if (n >= 1e6) return '$' + (n/1e6).toFixed(1).replace('.',',') + 'M';
+      return '$' + Math.round(n/1000) + 'K';
+    };
+    function calc(){
+      const people = +p.value, hours = +h.value, rate = +r.value;
+      document.getElementById('roi-people-v').textContent = people;
+      document.getElementById('roi-hours-v').textContent = hours;
+      document.getElementById('roi-rate-v').textContent = fmtCLP(rate);
+      const hm = people * hours * 4.3;
+      const ca = hm * rate * 12;
+      const save = ca * 0.7;
+      document.getElementById('roi-hm').textContent = Math.round(hm) + ' h';
+      document.getElementById('roi-ca').textContent = fmtCLPM(ca);
+      document.getElementById('roi-save').textContent = fmtCLPM(save) + ' / año';
+    }
+    [p,h,r].forEach(el => el.addEventListener('input', calc));
+    calc();
+  })();
+
+  // ==== Case filters ====
+  (function(){
+    const btns = document.querySelectorAll('.cf');
+    const cases = document.querySelectorAll('#cases-grid .case');
+    if (!btns.length) return;
+    btns.forEach(b => b.addEventListener('click', () => {
+      btns.forEach(x => x.classList.remove('on'));
+      b.classList.add('on');
+      const s = b.dataset.sector;
+      cases.forEach(c => {
+        const match = s === 'all' || c.dataset.sector === s;
+        c.classList.toggle('hide', !match);
+      });
+    }));
+  })();
+
+  // ==== Hero KPI rotator ====
+  (function(){
+    const sets = [
+      // Set 1 — Horas & ahorro
+      {a:['+1.200 h','▲ por equipo','liberadas al año'], b:['−70%','▼ vs. manual','tiempo de reporte'], c:['$14M','▲ año','ahorro estimado']},
+      // Set 2 — Velocidad & confiabilidad
+      {a:['3×','▲ vs. antes','cierre contable'],         b:['<2s','● real-time','refresh BI ejecutivo'], c:['96%','● 24/7','uptime del pipeline']},
+      // Set 3 — Escala & adopción
+      {a:['+1.200 h','▲ por equipo','SKUs clasificados'],       b:['85%','▲ 21 pts','match automático'],      c:['92%','▲ 14 pts','adopción tablero']}
+    ];
+    let i = 0;
+    const kpi = document.getElementById('hv-kpi-rotator');
+    if (!kpi) return;
+    setInterval(() => {
+      i = (i+1) % sets.length;
+      const set = sets[i];
+      const ks = kpi.querySelectorAll('.k');
+      ks.forEach(k => k.classList.add('flip'));
+      setTimeout(() => {
+        ks.forEach(k => {
+          const vEl = k.querySelector('[data-k]');
+          const key = vEl && vEl.dataset.k;
+          if (!key || !set[key]) return;
+          const [v, t, l] = set[key];
+          vEl.textContent = v;
+          const tEl = k.querySelector('.t');
+          const lEl = k.querySelector('.l');
+          if (tEl) tEl.textContent = t;
+          if (lEl) lEl.textContent = l;
+        });
+        ks.forEach(k => k.classList.remove('flip'));
+      }, 350);
+    }, 4000);
+  })();
+
+</script>
+
+</body>
+</html>
