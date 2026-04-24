@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Brief institucional — Data Impact Business Solutions SpA</title>
+<meta name="description" content="Presentación corporativa de Data Impact Business Solutions SpA. Datos formales, servicios, sectores atendidos y casos destacados." />
+<meta name="theme-color" content="#1F3864" />
+<link rel="icon" type="image/png" href="assets/logo-solutions-dark.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/styles.css" />
+
+<style>
+  /* Brief-specific layout */
+  body { background: #f5f6f8; }
+  .brief-top {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 16px 28px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line-2);
+  }
+  .brief-top .back { font-size: 13px; color: var(--navy); display: inline-flex; align-items: center; gap: 6px; }
+  .brief-top .back:hover { color: var(--blue); }
+  .brief-top .btn-print {
+    padding: 10px 16px; font-size: 13px; font-weight: 500;
+    background: var(--navy); color: #fff; border-radius: var(--radius);
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: background .15s var(--ease);
+  }
+  .brief-top .btn-print:hover { background: var(--blue); }
+  [data-theme="dark"] .brief-top .btn-print { color: var(--bg); }
+
+  .brief-page {
+    max-width: 820px;
+    margin: 24px auto;
+    background: var(--bg);
+    padding: 56px 64px;
+    border: 1px solid var(--line-2);
+    box-shadow: 0 8px 24px -12px rgba(0,0,0,.08);
+  }
+  @media (max-width: 680px) {
+    .brief-page { padding: 32px 24px; margin: 12px; }
+  }
+
+  .brief-cover {
+    display: grid; grid-template-columns: 1fr auto;
+    gap: 32px; align-items: start;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--navy);
+  }
+  .brief-cover img { height: 44px; width: auto; display: block; }
+  .brief-cover .kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--blue); margin-bottom: 14px;
+  }
+  .brief-cover h1 {
+    font-size: clamp(28px, 3.6vw, 36px);
+    letter-spacing: -0.025em; line-height: 1.1;
+    margin-bottom: 12px;
+  }
+  .brief-cover p { color: var(--ink-2); font-size: 15px; line-height: 1.55; max-width: 520px; }
+
+  .brief-section { margin: 40px 0; }
+  .brief-section h2 {
+    font-size: 20px;
+    letter-spacing: -0.015em;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line-2);
+  }
+  .brief-section h2::before {
+    content: attr(data-num);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; color: var(--blue); letter-spacing: .1em;
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+  .brief-section p { font-size: 14px; line-height: 1.65; color: var(--ink); margin-bottom: 10px; }
+
+  .brief-services {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 24px;
+    margin-top: 16px;
+  }
+  @media (max-width: 600px) { .brief-services { grid-template-columns: 1fr; } }
+  .brief-services .svc-line {
+    padding: 12px 14px;
+    background: var(--bg-alt);
+    border-left: 2px solid var(--blue);
+    border-radius: 2px;
+  }
+  .brief-services .svc-line b {
+    display: block;
+    color: var(--navy); font-weight: 600;
+    margin-bottom: 4px; font-size: 14px;
+  }
+  .brief-services .svc-line span { font-size: 13px; color: var(--ink-2); line-height: 1.5; }
+
+  .brief-sectors {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin-top: 12px;
+  }
+  .brief-sectors span {
+    padding: 6px 12px;
+    background: var(--blue-wash);
+    color: var(--blue);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: .04em;
+    border-radius: 999px;
+  }
+  [data-theme="dark"] .brief-sectors span { color: var(--blue-soft); }
+
+  .brief-case {
+    padding: 16px 18px;
+    background: var(--bg-tint);
+    border: 1px solid var(--line-2);
+    border-radius: var(--radius);
+    margin-bottom: 10px;
+  }
+  .brief-case .sect {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 4px;
+  }
+  .brief-case h3 { font-size: 14px; letter-spacing: -0.01em; margin-bottom: 6px; }
+  .brief-case p { font-size: 13px; color: var(--ink); line-height: 1.5; margin: 0; }
+  .brief-case p b { color: var(--navy); font-weight: 600; }
+
+  .brief-data {
+    display: grid; grid-template-columns: auto 1fr; gap: 8px 20px;
+    margin-top: 12px;
+  }
+  .brief-data dt {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: .04em; text-transform: uppercase;
+    color: var(--ink-2); padding-top: 2px;
+  }
+  .brief-data dd { margin: 0; font-size: 14px; color: var(--navy); font-weight: 500; }
+
+  .brief-seals {
+    margin-top: 20px; padding-top: 16px;
+    border-top: 1px solid var(--line-2);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  }
+  @media (max-width: 600px) { .brief-seals { grid-template-columns: 1fr; } }
+  .brief-seal {
+    display: flex; gap: 10px; align-items: flex-start;
+    padding: 10px 12px;
+    background: var(--bg-alt);
+    border-radius: var(--radius);
+    font-size: 12px; line-height: 1.4;
+  }
+  .brief-seal svg { color: var(--blue); flex-shrink: 0; margin-top: 1px; }
+
+  .brief-contact {
+    margin-top: 16px;
+    padding: 16px 18px;
+    background: var(--navy); color: #fff;
+    border-radius: var(--radius-lg);
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 20px;
+  }
+  @media (max-width: 520px) { .brief-contact { grid-template-columns: 1fr; } }
+  [data-theme="dark"] .brief-contact { color: var(--bg); }
+  .brief-contact .row { font-size: 13px; }
+  .brief-contact .row b {
+    display: block; font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; font-weight: 500; letter-spacing: .08em;
+    color: rgba(255,255,255,.6); text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  .brief-foot {
+    margin-top: 40px; padding-top: 16px;
+    border-top: 1px solid var(--line-2);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; color: var(--ink-2); letter-spacing: .04em;
+  }
+
+  /* Print — optimized for A4 */
+  @media print {
+    @page { size: A4; margin: 16mm 14mm; }
+    body { background: #fff !important; }
+    .brief-top { display: none !important; }
+    .brief-page {
+      max-width: none; margin: 0; padding: 0;
+      border: 0; box-shadow: none;
+    }
+    .brief-section { break-inside: avoid; }
+    .brief-cover { break-after: avoid; }
+    a { color: var(--navy) !important; text-decoration: none !important; }
+    .brief-contact { background: #1F3864 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<div class="brief-top">
+  <a href="index.html" class="back">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Volver al sitio
+  </a>
+  <button class="btn-print" type="button" onclick="window.print()">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+    Guardar como PDF
+  </button>
+</div>
+
+<main class="brief-page">
+
+  <header class="brief-cover">
+    <div>
+      <p class="kicker">Brief institucional · Abril 2026</p>
+      <h1>Data Impact Business Solutions SpA</h1>
+      <p>Empresa chilena especializada en tecnología, analítica de datos y desarrollo de soluciones digitales a medida. Respaldada por un equipo con más de 12 años de trayectoria en sectores regulados y operativos.</p>
+    </div>
+    <img src="assets/logo-solutions-dark.png" alt="Data Impact Solutions" />
+  </header>
+
+  <section class="brief-section">
+    <h2 data-num="01">Propuesta de valor</h2>
+    <p>Traducimos requerimientos de negocio en soluciones técnicas concretas, funcionales y sostenibles en el tiempo. Cubrimos el espectro completo: sistemas de gestión, plataformas web operacionales, analítica avanzada e inteligencia artificial aplicada.</p>
+    <p>Nuestro criterio de entrega es la adopción real por los equipos usuarios y la generación de resultados medibles. Construimos con buenas prácticas de gobierno de datos, gestión de accesos y seguridad de la información.</p>
+  </section>
+
+  <section class="brief-section">
+    <h2 data-num="02">Servicios</h2>
+    <div class="brief-services">
+      <div class="svc-line"><b>Business Intelligence</b><span>Dashboards ejecutivos, capa semántica y reportería unificada en Power BI, Tableau, Looker Studio.</span></div>
+      <div class="svc-line"><b>Ingeniería de Datos</b><span>Pipelines, ETL/ELT, integración de sistemas y gobierno de datos.</span></div>
+      <div class="svc-line"><b>Automatización de Procesos</b><span>Workflows en n8n, Make, Power Automate y Python que liberan horas reales.</span></div>
+      <div class="svc-line"><b>Inteligencia Artificial</b><span>Modelos predictivos, NLP, scoring y asistentes LLM (Azure OpenAI).</span></div>
+      <div class="svc-line"><b>Plataformas a medida</b><span>Sistemas de gestión, plataformas operacionales, aplicaciones full-stack y PWAs.</span></div>
+      <div class="svc-line"><b>Asesorías y Consultoría</b><span>Diagnóstico de datos y procesos, arquitectura, acompañamiento y gobierno.</span></div>
+    </div>
+  </section>
+
+  <section class="brief-section">
+    <h2 data-num="03">Sectores atendidos</h2>
+    <div class="brief-sectors">
+      <span>Salud &amp; Farmacéutica</span>
+      <span>Educación Superior</span>
+      <span>Servicios Financieros</span>
+      <span>Retail</span>
+      <span>Construcción &amp; Terreno</span>
+      <span>Sector Público</span>
+      <span>Servicios Profesionales</span>
+    </div>
+  </section>
+
+  <section class="brief-section">
+    <h2 data-num="04">Casos destacados</h2>
+
+    <div class="brief-case">
+      <div class="sect">Salud &amp; Farmacéutica · CASE·001</div>
+      <h3>Clasificación automática de interacciones comerciales</h3>
+      <p>Producto analítico de IA con clasificación automatizada, pipeline NLP y dashboard operacional. <b>Adoptado como producto comercial recurrente</b>, con renovaciones anuales y expansión de alcance.</p>
+    </div>
+
+    <div class="brief-case">
+      <div class="sect">Educación Superior · CASE·002</div>
+      <h3>Ecosistema BI ejecutivo consolidado</h3>
+      <p>Capa semántica única y tableros por comité. <b>Reportería a comité directivo con datos unificados</b>, sustituyendo tres informes paralelos.</p>
+    </div>
+
+    <div class="brief-case">
+      <div class="sect">Construcción &amp; Terreno · CASE·004</div>
+      <h3>Plataforma de control de obra con PWA</h3>
+      <p>Plataforma full-stack con captura en terreno y dashboard gerencial. <b>Operación centralizada en una sola vista</b>, con trazabilidad desde faena hasta contabilidad.</p>
+    </div>
+  </section>
+
+  <section class="brief-section">
+    <h2 data-num="05">Stack tecnológico principal</h2>
+    <div class="brief-sectors">
+      <span>Power BI</span>
+      <span>Tableau</span>
+      <span>Azure</span>
+      <span>Snowflake</span>
+      <span>BigQuery</span>
+      <span>PostgreSQL</span>
+      <span>dbt</span>
+      <span>React · Next.js</span>
+      <span>Node · FastAPI</span>
+      <span>Python</span>
+      <span>Azure OpenAI</span>
+      <span>n8n · Make</span>
+      <span>Power Automate</span>
+    </div>
+  </section>
+
+  <section class="brief-section">
+    <h2 data-num="06">Datos formales</h2>
+    <dl class="brief-data">
+      <dt>Razón social</dt><dd>DATA IMPACT BUSINESS SOLUTIONS SPA</dd>
+      <dt>RUT</dt><dd>78.000.816-4</dd>
+      <dt>Domicilio fiscal</dt><dd>Antonio Bellet 193, Of. 1210 · Providencia, Santiago, Chile</dd>
+      <dt>Giro</dt><dd>Tecnología, desarrollo de software y servicios de consultoría en análisis de datos</dd>
+      <dt>Facturación</dt><dd>Factura electrónica chilena · Compatible con Orden de Compra Mercado Público</dd>
+    </dl>
+
+    <div class="brief-seals">
+      <div class="brief-seal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <span>Inscrito en Registro de Proveedores de ChileCompra</span>
+      </div>
+      <div class="brief-seal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <span>Proveedor habilitado para organismos del Estado de Chile</span>
+      </div>
+      <div class="brief-seal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4-8-12V5l8-3 8 3v5c0 8-8 12-8 12z"/></svg>
+        <span>Firma de NDA al inicio de cada proyecto</span>
+      </div>
+      <div class="brief-seal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4-8-12V5l8-3 8 3v5c0 8-8 12-8 12z"/></svg>
+        <span>Código a medida de propiedad del cliente</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="brief-section">
+    <h2 data-num="07">Contacto</h2>
+    <div class="brief-contact">
+      <div class="row"><b>Contacto comercial</b>Nicolás González</div>
+      <div class="row"><b>Email</b>ngonzalez@dataimpact.cl</div>
+      <div class="row"><b>Teléfono</b>+56 9 4984 8853</div>
+      <div class="row"><b>Sitio web</b>dataimpact.cl</div>
+      <div class="row"><b>LinkedIn</b>/company/dataimpact</div>
+      <div class="row"><b>Oficina</b>Antonio Bellet 193, Of. 1210, Providencia, Santiago</div>
+    </div>
+  </section>
+
+  <footer class="brief-foot">
+    <span>© 2026 Data Impact Business Solutions SpA · RUT 78.000.816-4</span>
+    <span>dataimpact.cl</span>
+  </footer>
+
+</main>
+
+</body>
+</html>

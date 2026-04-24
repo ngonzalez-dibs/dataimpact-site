@@ -1,0 +1,22 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (por si agregamos tooling más adelante)
+node_modules/
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Claude Design bundle artifacts (solo el diseño exportado, no forman parte del sitio)
+project/
+chats/

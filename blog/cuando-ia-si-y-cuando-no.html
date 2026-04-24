@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Cuándo IA sí y cuándo IA no — Data Impact</title>
+<meta name="description" content="Criterios para no gastar en el modelo equivocado. Un árbol de decisión sencillo entre lo tradicional y lo inteligente." />
+<meta name="theme-color" content="#1F3864" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" type="image/png" href="../assets/logo-solutions-dark.png" />
+
+<meta property="og:title" content="Cuándo IA sí y cuándo IA no — Data Impact" />
+<meta property="og:description" content="Criterios para no gastar en el modelo equivocado." />
+<meta property="og:type" content="article" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/css/styles.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Cuándo IA sí y cuándo IA no: criterios para no gastar en el modelo equivocado",
+  "description": "Un árbol de decisión sencillo para saber cuándo conviene IA y cuándo una solución tradicional es más rápida, barata y confiable.",
+  "author": { "@type": "Organization", "name": "Data Impact Business Solutions SpA" },
+  "publisher": { "@type": "Organization", "name": "Data Impact Business Solutions SpA" }
+}
+</script>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="../index.html#top" class="logo" aria-label="Data Impact Business Solutions">
+      <img src="../assets/logo-solutions-dark.png" alt="Data Impact Solutions" class="logo-img logo-img-light" />
+      <img src="../assets/logo-solutions-light.png" alt="Data Impact Solutions" class="logo-img logo-img-dark" />
+    </a>
+    <div class="nav-links">
+      <a href="../index.html#servicios">Servicios</a>
+      <a href="../index.html#sectores">Sectores</a>
+      <a href="../index.html#casos">Casos</a>
+      <a href="../index.html#metodologia">Metodología</a>
+      <a href="../index.html#consultoria">Consultoría</a>
+      <a href="../index.html#faq">FAQ</a>
+      <a href="index.html" style="color: var(--navy); font-weight: 600;">Blog</a>
+      <a href="../index.html#contacto">Contacto</a>
+    </div>
+    <a href="../index.html#contacto" class="nav-cta">
+      Agendar reunión
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</nav>
+
+<main id="top">
+
+<article class="blog-post">
+  <div class="container">
+    <header class="post-header">
+      <p class="eyebrow">IA Aplicada</p>
+      <h1>Cuándo IA sí y cuándo IA no: criterios para no gastar en el modelo equivocado.</h1>
+      <div class="meta">
+        <span>Publicado <b>abril 2026</b></span>
+        <span>Lectura <b>~12 min</b></span>
+        <span>Categoría <b>IA Aplicada</b></span>
+      </div>
+    </header>
+
+    <div class="post-content">
+      <p>En los últimos dos años, la conversación con clientes cambió. Antes el problema era convencer de automatizar. Ahora el problema es el contrario: llegan convencidos de que lo que necesitan es IA, y a veces lo que necesitan es una planilla bien hecha.</p>
+
+      <p>Este artículo propone un criterio simple para decidir. No es contra la IA — construimos IA todos los días. Es contra el desperdicio: gastar un mes de trabajo y cinco cifras en una solución inteligente cuando un script de diez líneas resolvía el problema.</p>
+
+      <h2>La pregunta que casi nadie hace</h2>
+
+      <p>Antes de preguntar "¿cómo aplicamos IA?" conviene preguntar: <strong>¿el problema tiene reglas claras o ambigüedad genuina?</strong> Si la respuesta es "reglas claras", la IA probablemente es la herramienta equivocada. No porque no funcione, sino porque es más cara, más lenta de mantener, y menos auditable que una solución tradicional.</p>
+
+      <p>Ejemplo real: un área financiera nos pidió un modelo de IA para categorizar gastos. Después de una conversación de 20 minutos descubrimos que el 95% de los gastos venían con un código de centro de costo en el propio ERP. Lo que faltaba no era un clasificador — era un join.</p>
+
+      <h2>Cuándo <em>no</em> conviene IA</h2>
+
+      <p>Hay cuatro señales que indican que tu problema no necesita IA:</p>
+
+      <ul>
+        <li><strong>Reglas explícitas y estables.</strong> Si puedes escribir el procedimiento en una hoja y dárselo a una persona nueva, puedes programarlo. No necesitas que el modelo lo "aprenda".</li>
+        <li><strong>Volumen bajo.</strong> Menos de unos miles de casos por mes rara vez justifica el overhead de un modelo entrenado, validado y mantenido. Un bloque de reglas es más barato.</li>
+        <li><strong>Consecuencias altas de errores individuales.</strong> Contabilidad regulada, decisiones médicas críticas, cálculos legales. Si un error aislado es caro, prefieres el determinismo.</li>
+        <li><strong>Datos históricos pobres.</strong> Sin datos de calidad no hay modelo de calidad. "Lo entrenamos con lo que tenemos" es un mal inicio.</li>
+      </ul>
+
+      <h2>Cuándo <em>sí</em> conviene IA</h2>
+
+      <p>Las señales opuestas:</p>
+
+      <ul>
+        <li><strong>Ambigüedad lingüística.</strong> Texto libre, variantes de escritura, sinónimos, contextos. Aquí los sistemas tradicionales pierden rápido contra un modelo bien aplicado.</li>
+        <li><strong>Escala que no acepta revisión humana individual.</strong> 10.000 clasificaciones al mes, miles de documentos a consultar, millones de interacciones. La IA convierte un problema imposible en uno operable.</li>
+        <li><strong>Patrones no-obvios en datos numéricos.</strong> Detección de fraude, predicción de churn, scoring. Donde la intuición humana no alcanza y las reglas quedan cortas.</li>
+        <li><strong>Un flujo de revisión humana por excepción.</strong> El mejor uso de IA rara vez es "la IA decide". Es "la IA propone y un humano valida los casos dudosos".</li>
+      </ul>
+
+      <h2>Un árbol de decisión de un minuto</h2>
+
+      <blockquote>
+        <p>¿Puedo escribir las reglas? → Regla, no IA.<br>
+        ¿Tengo menos de 1.000 casos/mes? → Probablemente reglas o automatización.<br>
+        ¿El problema es texto libre o patrones no-obvios? → IA puede valer la pena.<br>
+        ¿Tengo datos históricos etiquetados? → Entonces vale la pena evaluarlo.<br>
+        ¿El costo de un error aislado es alto? → Mantén revisión humana por excepción.</p>
+      </blockquote>
+
+      <p>Con estos cinco filtros eliminamos entre el 60 y 80% de los proyectos "de IA" que nos llegan, y los reemplazamos por automatización, BI o integración — que son más rápidos, más baratos y cumplen mejor el objetivo de negocio.</p>
+
+      <h2>El costo escondido de la solución "inteligente"</h2>
+
+      <p>Cuando un cliente insiste en IA donde no hace falta, el costo escondido no es solo la construcción. Es el mantenimiento: versionado de modelos, monitoreo de drift, reentrenamiento cuando cambian los datos, evaluación periódica de performance. Una regla bien escrita se mantiene sola. Un modelo, no.</p>
+
+      <p>Esto no es un argumento contra la IA. Es un argumento a favor de aplicar IA donde efectivamente agrega valor. Cuando el problema lo pide, un modelo bien construido no tiene sustituto. Cuando no lo pide, cualquier sistema más simple le gana en costo, velocidad y confiabilidad.</p>
+
+      <h2>Regla práctica</h2>
+
+      <p>Si después de leer esto no estás seguro en qué lado de la línea cae tu proyecto, esa incertidumbre es información útil. Significa que probablemente vale la pena un diagnóstico de dos semanas antes de comprometer un proyecto completo. Un error en la decisión de herramienta se paga durante toda la vida útil del sistema.</p>
+    </div>
+
+    <footer class="post-footer">
+      <div class="post-cta-box">
+        <div>
+          <h3>¿Tienes un proyecto en duda?</h3>
+          <p>Conversemos 30 minutos. Si no necesitas IA, te lo decimos.</p>
+        </div>
+        <a class="btn btn-primary" href="../index.html#contacto">
+          Agendar reunión
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <nav class="post-nav">
+        <a href="index.html">← Volver al blog</a>
+        <a href="por-que-tu-dashboard-no-se-usa.html">Siguiente post →</a>
+      </nav>
+    </footer>
+  </div>
+</article>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot">
+      <div class="foot-logo">
+        <a href="../index.html#top" class="logo" aria-label="Data Impact Business Solutions">
+          <img src="../assets/logo-solutions-light.png" alt="Data Impact Solutions" class="foot-logo-img" />
+        </a>
+        <p>Tecnología, datos e IA aplicados a los problemas reales de tu negocio.</p>
+      </div>
+      <div>
+        <h5>Servicios</h5>
+        <ul>
+          <li><a href="../index.html#servicios">Business Intelligence</a></li>
+          <li><a href="../index.html#servicios">Ingeniería de Datos</a></li>
+          <li><a href="../index.html#servicios">Automatización</a></li>
+          <li><a href="../index.html#servicios">IA Aplicada</a></li>
+          <li><a href="../index.html#servicios">Plataformas a medida</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Sectores</h5>
+        <ul>
+          <li><a href="../index.html#sectores">Salud &amp; Farmacéutica</a></li>
+          <li><a href="../index.html#sectores">Educación Superior</a></li>
+          <li><a href="../index.html#sectores">Servicios Financieros</a></li>
+          <li><a href="../index.html#sectores">Construcción</a></li>
+          <li><a href="../index.html#sectores">Sector Público</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Empresa</h5>
+        <ul>
+          <li><a href="../index.html#casos">Casos</a></li>
+          <li><a href="../index.html#metodologia">Metodología</a></li>
+          <li><a href="../index.html#consultoria">Consultoría</a></li>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Términos de servicio</a></li>
+          <li><a href="#">Mercado Público</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Data Impact Business Solutions SpA · RUT 78.000.816-4 · Providencia, Santiago, Chile</span>
+      <div class="social">
+        <a href="#" aria-label="LinkedIn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8 19H5V8h3v11zM6.5 6.7A1.8 1.8 0 118.3 4.9a1.8 1.8 0 01-1.8 1.8zM20 19h-3v-5.6c0-3.4-4-3.1-4 0V19h-3V8h3v1.8c1.4-2.6 7-2.8 7 2.5V19z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 10);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+</script>
+
+</body>
+</html>

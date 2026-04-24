@@ -1,25 +1,63 @@
-# CODING AGENTS: READ THIS FIRST
+# Data Impact Business Solutions — Sitio Corporativo
 
-This is a **handoff bundle** from Claude Design (claude.ai/design).
+Sitio web corporativo de Data Impact Business Solutions SpA. One-page más blog y brief institucional. HTML/CSS/JS estático.
 
-A user mocked up designs in HTML/CSS/JS using an AI design tool, then exported this bundle so a coding agent can implement the designs for real.
+## Estructura
 
-## What you should do — IMPORTANT
+```
+.
+├── index.html                          ← landing principal
+├── brief-institucional.html            ← brief corporativo (imprimible a PDF)
+├── blog/
+│   ├── index.html                      ← listado de posts
+│   ├── cuando-ia-si-y-cuando-no.html
+│   ├── por-que-tu-dashboard-no-se-usa.html
+│   └── de-excel-a-plataforma.html
+├── assets/
+│   ├── css/styles.css                  ← todos los estilos
+│   ├── js/main.js                      ← JS del landing (rotador KPIs, modal casos, ROI, etc.)
+│   ├── logo-solutions-dark.png         ← logo para fondo claro
+│   └── logo-solutions-light.png        ← logo para fondo oscuro
+├── sitemap.xml
+└── robots.txt
+```
 
-**Read the chat transcripts first.** There are 1 chat transcript(s) in `chats/`. The transcripts show the full back-and-forth between the user and the design assistant — they tell you **what the user actually wants** and **where they landed** after iterating. Don't skip them. The final HTML files are the output, but the chat is where the intent lives.
+## Desarrollo local
 
-**Read `project/index.html` in full.** The user had this file open when they triggered the handoff, so it's almost certainly the primary design they want built. Read it top to bottom — don't skim. Then **follow its imports**: open every file it pulls in (shared components, CSS, scripts) so you understand how the pieces fit together before you start implementing.
+Cualquier servidor HTTP estático sirve. Lo más simple:
 
-**If anything is ambiguous, ask the user to confirm before you start implementing.** It's much cheaper to clarify scope up front than to build the wrong thing.
+```bash
+python3 -m http.server 8080
+# → http://localhost:8080
+```
 
-## About the design files
+## Publicación
 
-The design medium is **HTML/CSS/JS** — these are prototypes, not production code. Your job is to **recreate them pixel-perfectly** in whatever technology makes sense for the target codebase (React, Vue, native, whatever fits). Match the visual output; don't copy the prototype's internal structure unless it happens to fit.
+Deploy pensado para **Netlify** con form de contacto nativo:
 
-**Don't render these files in a browser or take screenshots unless the user asks you to.** Everything you need — dimensions, colors, layout rules — is spelled out in the source. Read the HTML and CSS directly; a screenshot won't tell you anything they don't.
+1. Push del repo a GitHub
+2. Conectar el repo en netlify.com (sin build command, publish directory = raíz)
+3. Configurar dominio custom `dataimpact.cl` en Netlify → Domain settings
+4. En GoDaddy (DNS), agregar:
+   - Registro `A` para `dataimpact.cl` → `75.2.60.5` (Netlify)
+   - Registro `CNAME` para `www` → `<tu-sitio>.netlify.app`
+5. Esperar propagación DNS (10-60 min)
 
-## Bundle contents
+Los registros `MX` del dominio (email) **no se tocan**.
 
-- `README.md` — this file
-- `chats/` — conversation transcripts (read these!)
-- `project/` — the `Page DataImpact` project files (HTML prototypes, assets, components)
+## Tecnología
+
+- HTML5 + CSS custom properties (temas claro/oscuro/sistema)
+- JS vanilla (sin frameworks, sin build)
+- Fuentes Google (Inter + JetBrains Mono)
+- Schema.org JSON-LD: Organization, ProfessionalService, FAQPage, BlogPosting
+- Dialog nativo para modal de casos, `<details>` para FAQ
+- IntersectionObserver para reveal-on-scroll
+
+## Atajos
+
+- **Ctrl/Cmd + Shift + T** — abrir el panel de tweaks (cambiar tema, variante de H1 y color de acento)
+
+## Licencia
+
+© 2026 Data Impact Business Solutions SpA · RUT 78.000.816-4

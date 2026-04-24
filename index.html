@@ -1,0 +1,1020 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Data Impact Business Solutions — Datos, BI e IA aplicados al negocio</title>
+<meta name="description" content="Desarrollamos soluciones tecnológicas a medida: sistemas de gestión, plataformas web, analítica avanzada e IA aplicada. 12+ años de experiencia en salud, educación, finanzas, retail, construcción y sector público." />
+<meta property="og:title" content="Data Impact Business Solutions" />
+<meta property="og:description" content="Tecnología, datos e IA aplicados a los problemas reales de tu negocio." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://dataimpact.cl" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Data Impact Business Solutions SpA",
+  "url": "https://dataimpact.cl",
+  "email": "ngonzalez@dataimpact.cl",
+  "telephone": "+56 9 4984 8853",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Antonio Bellet 193, Of. 1210",
+    "addressLocality": "Providencia",
+    "addressRegion": "Santiago",
+    "addressCountry": "CL"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Data Impact Business Solutions SpA",
+  "image": "https://dataimpact.cl/logo.png",
+  "url": "https://dataimpact.cl",
+  "telephone": "+56 9 4984 8853",
+  "email": "ngonzalez@dataimpact.cl",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Antonio Bellet 193, Of. 1210",
+    "addressLocality": "Providencia",
+    "addressRegion": "Región Metropolitana",
+    "postalCode": "7500000",
+    "addressCountry": "CL"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": -33.4225, "longitude": -70.6088 },
+  "areaServed": { "@type": "Country", "name": "Chile" },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios Data Impact",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Intelligence & Analítica Aplicada", "description": "Auditoría de fuentes, capa semántica y dashboards ejecutivos en Power BI, Tableau y Looker Studio." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ingeniería de Datos & Integración", "description": "Pipelines, ETL/ELT, APIs e integración entre sistemas con gobierno de datos." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatización de Procesos de Negocio", "description": "Workflows en n8n, Make, Power Automate y Python para liberar horas operativas." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Inteligencia Artificial Aplicada", "description": "Modelos predictivos, clasificación, scoring, NLP y asistentes LLM sobre Azure OpenAI." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Plataformas y Sistemas a Medida", "description": "Sistemas de gestión, plataformas operacionales, aplicaciones full-stack y PWAs." } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Asesorías y Consultoría", "description": "Diagnóstico de datos y procesos, arquitectura, acompañamiento técnico y gobierno." } }
+    ]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Trabajan con licitaciones de Mercado Público?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Estamos inscritos en el Registro de Proveedores de ChileCompra y habilitados para contratar con organismos del Estado. Preparamos propuestas técnicas, económicas y documentación exigida por las bases." } },
+    { "@type": "Question", "name": "¿Cuánto demora un dashboard desde cero?", "acceptedAnswer": { "@type": "Answer", "text": "Un MVP con datos conectados y 3-5 indicadores clave toma típicamente entre 3 y 6 semanas. Un ecosistema completo puede extenderse a 3-4 meses." } },
+    { "@type": "Question", "name": "¿Usan cloud, on-prem o ambos?", "acceptedAnswer": { "@type": "Answer", "text": "Ambos. La mayoría de proyectos nuevos van a Azure, Snowflake o BigQuery, pero mantenemos implementaciones on-prem cuando el contexto lo requiere." } },
+    { "@type": "Question", "name": "¿Se hacen cargo del hosting y la operación post-entrega?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, como servicio opcional. Ofrecemos soporte y monitoreo por SLA mensual, o traspaso operativo al equipo interno con documentación y capacitación." } },
+    { "@type": "Question", "name": "¿Trabajan bajo contrato fijo o time & materials?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del alcance. Proyectos definidos van a precio cerrado por fases; acompañamientos continuos funcionan en bloques mensuales." } },
+    { "@type": "Question", "name": "¿Qué pasa con la propiedad del código y los datos?", "acceptedAnswer": { "@type": "Answer", "text": "Todo el código desarrollado a medida queda de propiedad del cliente. Los datos nunca salen de sus ambientes sin autorización explícita. Firmamos NDA al inicio." } },
+    { "@type": "Question", "name": "¿Cuándo conviene IA y cuándo no?", "acceptedAnswer": { "@type": "Answer", "text": "IA conviene con problemas de escala, ambigüedad lingüística o patrones no-obvios. Para reglas claras y cálculos determinísticos, una solución tradicional es más barata, rápida y confiable." } },
+    { "@type": "Question", "name": "¿Cómo se factura?", "acceptedAnswer": { "@type": "Answer", "text": "Emitimos factura electrónica chilena. Para sector público, se emite según la Orden de Compra del portal Mercado Público." } }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {"@type":"Service","serviceType":"Business Intelligence","provider":{"@type":"Organization","name":"Data Impact Business Solutions SpA"},"areaServed":"CL","description":"Dashboards ejecutivos y operacionales, capa semántica, modelado de datos."},
+    {"@type":"Service","serviceType":"Ingeniería de datos","provider":{"@type":"Organization","name":"Data Impact Business Solutions SpA"},"areaServed":"CL","description":"Pipelines ETL/ELT, integración de sistemas, gobierno de datos."},
+    {"@type":"Service","serviceType":"Inteligencia Artificial Aplicada","provider":{"@type":"Organization","name":"Data Impact Business Solutions SpA"},"areaServed":"CL","description":"Modelos predictivos, NLP, asistentes LLM basados en Azure OpenAI."}
+  ]
+}
+</script>
+
+
+<meta name="theme-color" content="#1F3864" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" type="image/png" href="assets/logo-solutions-dark.png" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<div class="mobile-cta">
+  <a href="#contacto" class="btn btn-primary">Agendar</a>
+  <a href="#contacto" class="btn btn-secondary">Mensaje</a>
+</div>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo" aria-label="Data Impact Business Solutions">
+      <img src="assets/logo-solutions-dark.png" alt="Data Impact Solutions" class="logo-img logo-img-light" />
+      <img src="assets/logo-solutions-light.png" alt="Data Impact Solutions" class="logo-img logo-img-dark" />
+    </a>
+    <div class="nav-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#sectores">Sectores</a>
+      <a href="#casos">Casos</a>
+      <a href="#metodologia">Metodología</a>
+      <a href="#consultoria">Consultoría</a>
+      <a href="#faq">FAQ</a>
+      <a href="#blog">Blog</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <a href="#contacto" class="nav-cta">
+      Agendar reunión
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+    <button class="nav-mobile-toggle" aria-label="Menú">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow reveal">Data · BI · IA Aplicada</p>
+      <h1 class="reveal d1" id="hero-h1">
+        Datos que se convierten en <em>decisiones</em>.<br>
+        Decisiones que se convierten en resultados.
+      </h1>
+      <p class="hero-sub reveal d2">
+        Desarrollamos soluciones tecnológicas a medida: desde sistemas de gestión y plataformas web hasta analítica avanzada e inteligencia artificial. Más de 12 años del equipo en salud, educación, finanzas, retail, construcción y sector público.
+      </p>
+      <div class="hero-ctas reveal d3">
+        <a class="btn btn-primary" href="#contacto">
+          Agendar reunión
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a class="btn btn-secondary" href="#contacto">
+          Enviar mensaje
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H5.17L4 17.17V4z"/></svg>
+        </a>
+      </div>
+      <div class="hero-meta reveal d4">
+        <div class="item"><span class="num">12+</span><span class="lbl">Años del equipo</span></div>
+        <div class="item"><span class="num">7</span><span class="lbl">Sectores atendidos</span></div>
+        <div class="item"><span class="num">Santiago</span><span class="lbl">Providencia, CL</span></div>
+      </div>
+    </div>
+
+    <!-- Hero visual: animated dashboard + nodes -->
+    <div class="hero-visual reveal d2">
+      <div class="hv-card hv-main">
+        <div class="hv-main-header">
+          <span class="title">Pipeline — Ingresos por sector</span>
+          <div class="hv-dots"><span></span><span></span><span></span></div>
+        </div>
+        <div class="hv-kpi" id="hv-kpi-rotator">
+          <div class="k"><div class="v" data-k="a">+1.200 h</div><div class="t">▲ por equipo</div><div class="l">SKUs clasificados</div></div>
+          <div class="k"><div class="v" data-k="b">−70%</div><div class="t">▼ vs. manual</div><div class="l">tiempo de reporte</div></div>
+          <div class="k"><div class="v" data-k="c">$14M</div><div class="t">▲ año</div><div class="l">ahorro estimado</div></div>
+        </div>
+        <div class="hv-chart">
+          <svg viewBox="0 0 400 140" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="area" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stop-color="currentColor" stop-opacity=".25"/>
+                <stop offset="100%" stop-color="currentColor" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <!-- gridlines -->
+            <g stroke="var(--line-2)" stroke-width="1">
+              <line x1="0" y1="35" x2="400" y2="35"/>
+              <line x1="0" y1="70" x2="400" y2="70"/>
+              <line x1="0" y1="105" x2="400" y2="105"/>
+            </g>
+            <path class="hv-path-fill" style="color: var(--blue);" d="M 0 110 L 30 95 L 60 100 L 90 80 L 120 85 L 150 65 L 180 70 L 210 50 L 240 55 L 270 35 L 300 40 L 330 25 L 360 30 L 400 15 L 400 140 L 0 140 Z" fill="url(#area)"/>
+            <path class="hv-path" d="M 0 110 L 30 95 L 60 100 L 90 80 L 120 85 L 150 65 L 180 70 L 210 50 L 240 55 L 270 35 L 300 40 L 330 25 L 360 30 L 400 15"/>
+            <!-- points -->
+            <g fill="var(--blue)">
+              <circle cx="90" cy="80" r="2.5"/>
+              <circle cx="210" cy="50" r="2.5"/>
+              <circle cx="330" cy="25" r="2.5"/>
+            </g>
+          </svg>
+        </div>
+        <div class="hv-x"><span>Q1</span><span>Q2</span><span>Q3</span><span>Q4</span></div>
+      </div>
+
+      <div class="hv-badge hv-badge-bl">
+        <span class="pulse-dot"></span>
+        <span>pipeline ejecutándose</span>
+      </div>
+
+      <div class="hv-badge hv-badge-tr">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--blue);"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px;">llm · scoring · etl</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 1b. Positioning band ============ -->
+<section class="band">
+  <div class="container band-inner">
+    <h2 class="reveal">Todo el espectro tecnológico,<br>un solo criterio.</h2>
+    <p class="reveal d1">
+      Construimos sistemas de contabilidad, control de gestión, gestión documental y plataformas web operacionales. También motores de analítica, modelos predictivos y asistentes basados en LLMs. La decisión entre una solución tradicional y una con IA nunca depende de la moda — depende de qué resuelve mejor el problema de negocio.
+    </p>
+  </div>
+</section>
+
+<!-- ============ 2. Services ============ -->
+<section class="sec" id="servicios">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">01 — Servicios</p>
+      <h2>Seis áreas, un mismo estándar de ejecución.</h2>
+      <p>Del descubrimiento del dato al sistema en producción. Elegimos el stack según el problema, no según la moda.</p>
+    </div>
+
+    <div class="services reveal d1">
+      <div class="svc">
+        <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l3-3 3 3 5-5"/></svg></div>
+        <span class="svc-idx">01</span>
+        <h3>Business Intelligence &amp; Analítica Aplicada</h3>
+        <p>Todo el ciclo de BI: desde el descubrimiento y modelado de datos hasta indicadores que cambian decisiones. Auditoría de fuentes, capa semántica y dashboards en Power BI, Tableau y Looker Studio.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg></div>
+        <span class="svc-idx">02</span>
+        <h3>Ingeniería de Datos &amp; Integración</h3>
+        <p>Pipelines, ETL/ELT, APIs e integración entre sistemas. Modelado y gobierno con buenas prácticas. La capa donde los datos dejan de perderse entre Excel, ERPs y ventas.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.2-8.56"/><path d="M21 4v5h-5"/></svg></div>
+        <span class="svc-idx">03</span>
+        <h3>Automatización de Procesos</h3>
+        <p>Workflows en n8n, Make, Power Automate y Python que liberan horas reales de los equipos. Menos copiar-pegar, más análisis.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg></div>
+        <span class="svc-idx">04</span>
+        <h3>Inteligencia Artificial Aplicada</h3>
+        <p>Modelos predictivos, clasificación, scoring, NLP y asistentes basados en LLMs (Azure OpenAI). IA que resuelve un problema concreto, no demos.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <span class="svc-idx">05</span>
+        <h3>Plataformas &amp; Sistemas a Medida</h3>
+        <p>Sistemas de gestión (contabilidad, control de gestión, gestión documental), plataformas operacionales, aplicaciones full-stack (React, Next.js, Node, FastAPI) y PWAs para captura en terreno.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4-8-12V5l8-3 8 3v5c0 8-8 12-8 12z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <span class="svc-idx">06</span>
+        <h3>Asesorías, Consultoría &amp; Apoyo Integral</h3>
+        <p>Diagnóstico de datos y procesos, definición de arquitectura, acompañamiento técnico y gobierno de la información. Ayudamos a decidir qué construir antes de escribir una línea de código.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. Sectors ============ -->
+<section class="sec" id="sectores" style="padding-top: 40px;">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">02 — Sectores</p>
+      <h2>Industrias donde trabajamos hoy.</h2>
+      <p>Cada sector exige distintos criterios de dato, distintas reglas de negocio. Hemos aprendido los de estos siete.</p>
+    </div>
+
+    <div class="sectors reveal d1">
+      <div class="sector">
+        <span class="tag">01 / Healthcare</span>
+        <h4>Salud &amp; Farmacéutica</h4>
+        <p>Soluciones analíticas para laboratorios, clínicas y áreas de medical affairs.</p>
+      </div>
+      <div class="sector">
+        <span class="tag">02 / Education</span>
+        <h4>Educación Superior</h4>
+        <p>Reportería ejecutiva y tableros para escuelas de negocios y universidades.</p>
+      </div>
+      <div class="sector">
+        <span class="tag">03 / Finance</span>
+        <h4>Servicios Financieros</h4>
+        <p>Automatización de reportería comercial y análisis de cartera.</p>
+      </div>
+      <div class="sector">
+        <span class="tag">04 / Retail</span>
+        <h4>Retail</h4>
+        <p>Análisis de ventas, catálogos y operación de tiendas.</p>
+      </div>
+      <div class="sector">
+        <span class="tag">05 / Construction</span>
+        <h4>Construcción &amp; Terreno</h4>
+        <p>Plataformas para control de faenas, logística y reportería gerencial desde el campo.</p>
+      </div>
+      <div class="sector">
+        <span class="tag">06 / Public Sector</span>
+        <h4>Sector Público</h4>
+        <p>Soluciones para organismos del Estado a través de Mercado Público.</p>
+      </div>
+      <div class="sector">
+        <span class="tag">07 / Services</span>
+        <h4>Servicios Profesionales</h4>
+        <p>BI y automatización para empresas de servicios y corporativos.</p>
+      </div>
+      <div class="sector" style="background: var(--bg-tint);">
+        <span class="tag" style="color: var(--ink-2)">+ siguiente</span>
+        <h4 style="color: var(--ink-2)">¿Tu industria?</h4>
+        <p>Si tu sector no está arriba pero el problema es reconocible, probablemente podamos ayudar. Hablemos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. Cases ============ -->
+<section class="sec" id="casos" style="padding-top: 40px;">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">03 — Casos</p>
+      <h2>Proyectos reales, resultados medibles.</h2>
+      <p>Por respeto a la confidencialidad de nuestros clientes, describimos el desafío, la solución y el resultado — sin nombres ni logos.</p>
+    </div>
+
+    <div class="case-filters reveal" id="case-filters">
+      <button class="cf on" data-sector="all">Todos</button>
+      <button class="cf" data-sector="salud">Salud</button>
+      <button class="cf" data-sector="educacion">Educación</button>
+      <button class="cf" data-sector="finanzas">Finanzas</button>
+      <button class="cf" data-sector="construccion">Construcción</button>
+      <button class="cf" data-sector="legal">Legal</button>
+      <button class="cf" data-sector="retail">Retail</button>
+    </div>
+    <div class="cases reveal d1" id="cases-grid">
+      <!-- Case 1 -->
+      <article class="case" data-sector="salud" tabindex="0" role="button" aria-label="Ver detalle del caso de Salud">
+        <div class="case-head">
+          <span class="case-sector">Salud &amp; Farmacéutica</span>
+          <span class="case-num">CASE·001</span>
+        </div>
+        <div class="case-row"><span class="lbl">DESAFÍO</span><span class="val">Clasificación manual de miles de interacciones comerciales mensuales, sin trazabilidad ni consistencia entre equipos.</span></div>
+        <div class="case-row"><span class="lbl">SOLUCIÓN</span><span class="val">Producto analítico de IA con clasificación automatizada, pipeline de NLP y dashboard operacional integrado.</span></div>
+        <div class="case-row result"><span class="lbl">RESULTADO</span><span class="val">Solución <b>adoptada como producto comercial recurrente</b>, con renovaciones anuales y expansión de alcance.</span></div>
+        <button class="case-more" type="button">Ver detalle <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+        <div class="case-detail" hidden>
+          <h3>Clasificación automática de interacciones comerciales en el sector farmacéutico</h3>
+          <div class="cd-meta">
+            <span>Sector <b>Salud &amp; Farmacéutica</b></span>
+            <span>Case <b>CASE·001</b></span>
+            <span>Duración <b>~6 meses + renovación anual</b></span>
+          </div>
+          <h4>Contexto</h4>
+          <p>El cliente es una organización del sector farmacéutico con equipos comerciales distribuidos que registran miles de interacciones mensuales con profesionales de salud. La clasificación manual de cada interacción dependía del criterio del ejecutivo y no existía una vista consolidada que permitiera análisis comparativos confiables.</p>
+          <h4>Desafío</h4>
+          <p>Miles de interacciones mensuales en texto libre, con categorías inconsistentes entre equipos y sin visibilidad agregada para el área de medical affairs. Los reportes demoraban semanas y los hallazgos llegaban tarde para accionarlos.</p>
+          <h4>Solución</h4>
+          <p>Construimos un producto analítico que combina pipeline de NLP, clasificación automatizada con LLMs y un dashboard operacional. El flujo incluye ingesta desde el CRM, normalización, clasificación semántica con revisión humana por excepción, y un tablero ejecutivo integrado para medical affairs.</p>
+          <h4>Stack</h4>
+          <ul class="cd-stack"><li>Azure OpenAI</li><li>Python</li><li>Cognitive Search</li><li>Power BI</li><li>Azure Data Factory</li></ul>
+          <h4>Resultado</h4>
+          <div class="cd-results"><p>La solución fue adoptada como producto comercial recurrente, con renovaciones anuales y expansión progresiva del alcance a nuevas categorías e indicaciones terapéuticas.</p></div>
+          <div class="cd-cta"><a class="btn btn-primary" href="#contacto">Tengo un caso similar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </article>
+
+      <!-- Case 2 -->
+      <article class="case" data-sector="educacion" tabindex="0" role="button" aria-label="Ver detalle del caso de Educación">
+        <div class="case-head">
+          <span class="case-sector">Educación Superior</span>
+          <span class="case-num">CASE·002</span>
+        </div>
+        <div class="case-row"><span class="lbl">DESAFÍO</span><span class="val">Reportería dispersa entre múltiples fuentes; cada área armaba sus propios números y rara vez coincidían.</span></div>
+        <div class="case-row"><span class="lbl">SOLUCIÓN</span><span class="val">Ecosistema BI ejecutivo consolidado con capa semántica única y tableros específicos por comité.</span></div>
+        <div class="case-row result"><span class="lbl">RESULTADO</span><span class="val">Reportería a <b>comité directivo con datos unificados</b>, sustituyendo tres informes paralelos.</span></div>
+        <button class="case-more" type="button">Ver detalle <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+        <div class="case-detail" hidden>
+          <h3>Ecosistema BI ejecutivo para institución de educación superior</h3>
+          <div class="cd-meta">
+            <span>Sector <b>Educación Superior</b></span>
+            <span>Case <b>CASE·002</b></span>
+            <span>Duración <b>~4 meses</b></span>
+          </div>
+          <h4>Contexto</h4>
+          <p>La organización operaba con múltiples fuentes de datos (sistema académico, ERP, CRM comercial, plataforma de admisión) sin una capa semántica común. Cada dirección armaba sus propios cuadros, lo que producía cifras distintas para el mismo indicador entre áreas.</p>
+          <h4>Desafío</h4>
+          <p>Reportería fragmentada y contradictoria entre direcciones. El comité directivo recibía tres informes paralelos para la misma pregunta, todos defendibles, todos distintos. La conversación se desviaba hacia reconciliar cifras en vez de decidir.</p>
+          <h4>Solución</h4>
+          <p>Diseñamos una capa semántica única que unifica definiciones de KPIs, matrículas, conversión, retención y cobertura financiera. Sobre esa capa, tableros específicos para rectoría, finanzas, admisión y vicerrectoría académica, consumiendo la misma fuente.</p>
+          <h4>Stack</h4>
+          <ul class="cd-stack"><li>Power BI</li><li>dbt</li><li>SQL Server</li><li>Azure Data Factory</li></ul>
+          <h4>Resultado</h4>
+          <div class="cd-results"><p>El comité directivo hoy recibe una única reportería unificada por trimestre. Las tres series paralelas fueron deprecadas y el tiempo de preparación del comité bajó de 2 semanas a menos de 3 días.</p></div>
+          <div class="cd-cta"><a class="btn btn-primary" href="#contacto">Tengo un caso similar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </article>
+
+      <!-- Case 3 -->
+      <article class="case" data-sector="finanzas" tabindex="0" role="button" aria-label="Ver detalle del caso de Finanzas">
+        <div class="case-head">
+          <span class="case-sector">Servicios Financieros</span>
+          <span class="case-num">CASE·003</span>
+        </div>
+        <div class="case-row"><span class="lbl">DESAFÍO</span><span class="val">Reportes comerciales armados manualmente cada cierre, con retrasos y errores recurrentes en conciliaciones.</span></div>
+        <div class="case-row"><span class="lbl">SOLUCIÓN</span><span class="val">Automatización end-to-end con Python + Power BI, incluyendo validaciones y reenvío automático por segmento.</span></div>
+        <div class="case-row result"><span class="lbl">RESULTADO</span><span class="val"><b>Ahorro significativo de horas mensuales</b> de analista, reinvertidas en análisis comercial.</span></div>
+        <button class="case-more" type="button">Ver detalle <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+        <div class="case-detail" hidden>
+          <h3>Automatización de reportería comercial para servicios financieros</h3>
+          <div class="cd-meta">
+            <span>Sector <b>Servicios Financieros</b></span>
+            <span>Case <b>CASE·003</b></span>
+            <span>Duración <b>~3 meses</b></span>
+          </div>
+          <h4>Contexto</h4>
+          <p>Un equipo comercial en servicios financieros producía cada cierre una batería de reportes por segmento, con consolidación manual entre el core transaccional y planillas internas. El cierre mensual consumía entre 3 y 5 días de analistas senior.</p>
+          <h4>Desafío</h4>
+          <p>Retrasos crónicos y errores repetidos en conciliaciones, con consecuencias en la agilidad comercial: los ejecutivos recibían los números cuando el mes ya estaba avanzado, limitando las acciones correctivas.</p>
+          <h4>Solución</h4>
+          <p>Automatización end-to-end del proceso con Python para la extracción y validación contra reglas de negocio, modelo dimensional en Power BI y despliegue automático de los reportes segmentados a cada ejecutivo por email.</p>
+          <h4>Stack</h4>
+          <ul class="cd-stack"><li>Python</li><li>Power BI</li><li>SQL Server</li><li>Power Automate</li></ul>
+          <h4>Resultado</h4>
+          <div class="cd-results"><p>Ahorro significativo de horas/mes de analista senior, reinvertidas en análisis comercial proactivo. Los reportes ahora se distribuyen el día hábil siguiente al cierre, no al quinto.</p></div>
+          <div class="cd-cta"><a class="btn btn-primary" href="#contacto">Tengo un caso similar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </article>
+
+      <!-- Case 4 -->
+      <article class="case" data-sector="construccion" tabindex="0" role="button" aria-label="Ver detalle del caso de Construcción">
+        <div class="case-head">
+          <span class="case-sector">Construcción &amp; Terreno</span>
+          <span class="case-num">CASE·004</span>
+        </div>
+        <div class="case-row"><span class="lbl">DESAFÍO</span><span class="val">Procesos de control de obra dispersos entre Excel, papel y Drive. Sin visibilidad gerencial en tiempo real.</span></div>
+        <div class="case-row"><span class="lbl">SOLUCIÓN</span><span class="val">Plataforma web/móvil full-stack con captura en terreno (PWA), dashboard gerencial e integración contable.</span></div>
+        <div class="case-row result"><span class="lbl">RESULTADO</span><span class="val">Operación centralizada en <b>una sola vista gerencial</b>, con trazabilidad desde faena hasta contabilidad.</span></div>
+        <button class="case-more" type="button">Ver detalle <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+        <div class="case-detail" hidden>
+          <h3>Plataforma de control de obra con captura en terreno</h3>
+          <div class="cd-meta">
+            <span>Sector <b>Construcción &amp; Terreno</b></span>
+            <span>Case <b>CASE·004</b></span>
+            <span>Duración <b>~5 meses</b></span>
+          </div>
+          <h4>Contexto</h4>
+          <p>Una empresa con múltiples frentes de obra operaba el control diario en una mezcla de Excel, cuadernos de terreno y carpetas compartidas. La información relevante para el control gerencial llegaba desordenada y con días de atraso.</p>
+          <h4>Desafío</h4>
+          <p>Pérdida de trazabilidad entre la faena y la contabilidad, retrabajo en cierres y visibilidad gerencial retrasada. Los problemas en terreno se volvían visibles a nivel gerencial cuando ya era caro corregirlos.</p>
+          <h4>Solución</h4>
+          <p>Plataforma web full-stack con PWA para captura en terreno offline-first, dashboard gerencial en tiempo casi real e integración con el sistema contable. Roles diferenciados para capataz, jefe de terreno, administrador de obra y gerencia.</p>
+          <h4>Stack</h4>
+          <ul class="cd-stack"><li>React + Next.js</li><li>Node.js + FastAPI</li><li>PostgreSQL</li><li>PWA offline-first</li><li>Power BI</li></ul>
+          <h4>Resultado</h4>
+          <div class="cd-results"><p>Operación centralizada en una sola vista gerencial, con trazabilidad completa desde la faena hasta la contabilidad. Los cierres mensuales dejaron de depender de reconciliaciones manuales.</p></div>
+          <div class="cd-cta"><a class="btn btn-primary" href="#contacto">Tengo un caso similar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </article>
+
+      <!-- Case 5 -->
+      <article class="case" data-sector="legal" tabindex="0" role="button" aria-label="Ver detalle del caso Legal">
+        <div class="case-head">
+          <span class="case-sector">Corporativo / Legal</span>
+          <span class="case-num">CASE·005</span>
+        </div>
+        <div class="case-row"><span class="lbl">DESAFÍO</span><span class="val">Consulta manual de documentos internos extensos, con tiempos de búsqueda que dilataban decisiones.</span></div>
+        <div class="case-row"><span class="lbl">SOLUCIÓN</span><span class="val">Asistente IA de búsqueda semántica sobre documentos con Azure OpenAI + Cognitive Search.</span></div>
+        <div class="case-row result"><span class="lbl">RESULTADO</span><span class="val">Respuestas en español con <b>referencias precisas al documento fuente</b>, verificables por el equipo legal.</span></div>
+        <button class="case-more" type="button">Ver detalle <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+        <div class="case-detail" hidden>
+          <h3>Asistente IA de búsqueda semántica sobre documentos corporativos</h3>
+          <div class="cd-meta">
+            <span>Sector <b>Corporativo / Legal</b></span>
+            <span>Case <b>CASE·005</b></span>
+            <span>Duración <b>~3 meses</b></span>
+          </div>
+          <h4>Contexto</h4>
+          <p>Un área legal corporativa manejaba un repositorio de cientos de documentos extensos (contratos, pólizas, regulaciones internas) que debía consultarse recurrentemente ante nuevas operaciones y auditorías.</p>
+          <h4>Desafío</h4>
+          <p>Responder una pregunta precisa sobre una cláusula específica podía tomar horas de revisión manual. El tiempo de respuesta dilataba decisiones comerciales y aumentaba el riesgo de precedentes mal aplicados.</p>
+          <h4>Solución</h4>
+          <p>Asistente IA con búsqueda semántica sobre el corpus documental, respondiendo en español con citación textual del documento fuente. Todas las respuestas son verificables: el equipo legal conserva el control final.</p>
+          <h4>Stack</h4>
+          <ul class="cd-stack"><li>Azure OpenAI (GPT-4)</li><li>Azure Cognitive Search</li><li>Python + FastAPI</li><li>React</li></ul>
+          <h4>Resultado</h4>
+          <div class="cd-results"><p>Respuestas en español con referencias precisas al documento fuente, verificables por el equipo legal. Tiempo medio de consulta bajó de horas a minutos.</p></div>
+          <div class="cd-cta"><a class="btn btn-primary" href="#contacto">Tengo un caso similar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </article>
+
+      <!-- Case 6 -->
+      <article class="case" data-sector="retail" tabindex="0" role="button" aria-label="Ver detalle del caso Retail">
+        <div class="case-head">
+          <span class="case-sector">Retail / Catálogos</span>
+          <span class="case-num">CASE·006</span>
+        </div>
+        <div class="case-row"><span class="lbl">DESAFÍO</span><span class="val">Mapeo manual de descripciones comerciales contra catálogo interno, a escala de miles de SKUs por mes.</span></div>
+        <div class="case-row"><span class="lbl">SOLUCIÓN</span><span class="val">Motor de búsqueda semántica con embeddings vectoriales y flujo de revisión humana por excepción.</span></div>
+        <div class="case-row result"><span class="lbl">RESULTADO</span><span class="val">Más de <b>85% de match automático</b> en catálogos de 10.000+ productos, con revisión focalizada.</span></div>
+        <button class="case-more" type="button">Ver detalle <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+        <div class="case-detail" hidden>
+          <h3>Matching automático de SKUs con embeddings vectoriales</h3>
+          <div class="cd-meta">
+            <span>Sector <b>Retail / Catálogos</b></span>
+            <span>Case <b>CASE·006</b></span>
+            <span>Duración <b>~4 meses</b></span>
+          </div>
+          <h4>Contexto</h4>
+          <p>Una operación de retail recibía listados con miles de descripciones comerciales provenientes de proveedores externos y debía mapearlas contra su catálogo interno para consolidar ventas y tomar decisiones de surtido.</p>
+          <h4>Desafío</h4>
+          <p>Mapeo manual descripción-por-descripción a escala de 10.000+ SKUs/mes, con tasas de error altas y tiempos de respuesta incompatibles con la operación. La alternativa (reglas exactas) fallaba ante variantes ortográficas, abreviaciones y sinónimos.</p>
+          <h4>Solución</h4>
+          <p>Motor de búsqueda semántica con embeddings vectoriales que produce candidatos rankeados por similitud. Flujo de revisión humana por excepción: solo las descripciones con baja confianza pasan al analista.</p>
+          <h4>Stack</h4>
+          <ul class="cd-stack"><li>Python</li><li>Embeddings OpenAI</li><li>pgvector</li><li>FastAPI</li><li>React</li></ul>
+          <h4>Resultado</h4>
+          <div class="cd-results"><p>Más del 85% de match automático en catálogos de 10.000+ productos, con revisión humana focalizada solo en los casos dudosos. La capacidad operativa se multiplicó sin incorporar head-count.</p></div>
+          <div class="cd-cta"><a class="btn btn-primary" href="#contacto">Tengo un caso similar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. Methodology ============ -->
+<section class="sec method-section" id="metodologia" style="padding-top: 40px;">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">04 — Metodología</p>
+      <h2>Cómo trabajamos.</h2>
+      <p>Sin metodología inventada: cuatro etapas con entregables claros en cada una. Entras con un problema, sales con una solución que tu equipo usa.</p>
+    </div>
+
+    <div class="method">
+      <div class="step reveal" data-step="01"><span class="step-num">Escuchar</span><h3>Entender el problema</h3><p>Entender el problema real antes que la herramienta. A veces la mejor solución no es código.</p></div>
+      <div class="step reveal d1" data-step="02"><span class="step-num">Diseñar</span><h3>Arquitectura y plan</h3><p>Arquitectura técnica clara, criterios de éxito medibles, plan por fases.</p></div>
+      <div class="step reveal d2" data-step="03"><span class="step-num">Construir</span><h3>Entregables iterativos</h3><p>Iteraciones cortas con entregables funcionales. Stack elegido según el problema, no según la moda.</p></div>
+      <div class="step reveal d3" data-step="04"><span class="step-num">Acompañar</span><h3>Adopción y gobierno</h3><p>Adopción, soporte post-implementación y gobierno. Que la solución efectivamente se use.</p></div>
+    </div>
+
+    <div class="method-quote reveal d1">
+      <q>El valor no está en dominar herramientas, sino en el criterio para elegir la correcta.</q>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. Consulting ============ -->
+<section class="sec consulting-section" id="consultoria">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">05 — Asesorías &amp; Consultoría</p>
+      <h2>Tres formas de trabajar juntos.</h2>
+      <p>No todo proyecto necesita construcción. A veces lo que se necesita es criterio técnico senior, en la dosis justa.</p>
+    </div>
+
+    <div class="consulting">
+      <div class="engage reveal">
+        <span class="engage-tag">◆ puntual</span>
+        <h3>Diagnóstico puntual</h3>
+        <p>Revisión de datos, procesos o arquitectura con entregable ejecutivo. Dos a seis semanas, alcance cerrado.</p>
+        <div class="price-line">desde <b>40 UF</b></div>
+        <div class="ideal">Ideal para <i>“no sabemos por dónde empezar”</i>.</div>
+      </div>
+      <div class="engage reveal d1">
+        <span class="engage-tag">◆ continuo</span>
+        <h3>Acompañamiento continuo</h3>
+        <p>Rol de consultor técnico a tiempo parcial. Revisiones recurrentes, apoyo en decisiones y gobierno.</p>
+        <div class="price-line">desde <b>80 UF / mes</b></div>
+        <div class="ideal">Ideal para equipos internos que necesitan criterio senior sin sumar head-count.</div>
+      </div>
+      <div class="engage reveal d2">
+        <span class="engage-tag">◆ integral</span>
+        <h3>Apoyo integral por proyecto</h3>
+        <p>Desde el diagnóstico hasta la puesta en producción. Un solo responsable, end-to-end.</p>
+        <div class="price-line">desde <b>250 UF</b></div>
+        <div class="ideal">Ideal cuando hace falta que algo llegue en producción, no solo que se diseñe.</div>
+      </div>
+    </div>
+
+    <div class="consulting-cta reveal d2">
+      <a class="btn btn-secondary" href="#contacto">
+        Agendar una conversación de 30 minutos
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. Blog ============ -->
+<section class="sec" id="blog">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">06 — Blog &amp; Recursos</p>
+      <h2>Notas técnicas, sin humo.</h2>
+      <p>Escribimos sobre lo que vemos todos los días — criterios de decisión, errores comunes, y por qué a veces lo simple gana.</p>
+    </div>
+
+    <div class="blog">
+      <article class="post reveal">
+        <div class="post-cover">
+          <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="250" fill="#1F3864"/>
+            <g stroke="rgba(123,167,225,.2)" stroke-width="1">
+              <line x1="0" y1="60" x2="400" y2="60"/>
+              <line x1="0" y1="120" x2="400" y2="120"/>
+              <line x1="0" y1="180" x2="400" y2="180"/>
+            </g>
+            <path d="M 0 180 L 50 150 L 100 165 L 150 120 L 200 130 L 250 80 L 300 95 L 350 55 L 400 70" fill="none" stroke="#7BA7E1" stroke-width="2"/>
+            <path d="M 0 200 L 50 195 L 100 190 L 150 180 L 200 185 L 250 170 L 300 175 L 350 165 L 400 170" fill="none" stroke="rgba(255,255,255,.3)" stroke-width="1.5" stroke-dasharray="3 3"/>
+            <g fill="#7BA7E1"><circle cx="150" cy="120" r="3"/><circle cx="250" cy="80" r="3"/><circle cx="350" cy="55" r="3"/></g>
+          </svg>
+        </div>
+        <div class="post-body">
+          <div class="post-meta"><span>IA APLICADA</span><span class="dot">·</span><span>12 MIN</span></div>
+          <h3>Cuándo IA sí y cuándo IA no: criterios para no gastar en el modelo equivocado.</h3>
+          <p class="post-excerpt">Un árbol de decisión sencillo: si tu problema cabe en una planilla bien pensada, empieza ahí. Por qué empezar por IA es casi siempre un error caro.</p>
+          <a class="post-link" href="blog/cuando-ia-si-y-cuando-no.html">Leer más →</a>
+        </div>
+      </article>
+
+      <article class="post reveal d1">
+        <div class="post-cover">
+          <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="250" fill="#E8EDF5"/>
+            <g fill="#1F3864">
+              <rect x="40" y="160" width="40" height="60" opacity=".4"/>
+              <rect x="90" y="130" width="40" height="90" opacity=".5"/>
+              <rect x="140" y="100" width="40" height="120" opacity=".6"/>
+              <rect x="190" y="70" width="40" height="150" opacity=".75"/>
+              <rect x="240" y="90" width="40" height="130" opacity=".55"/>
+              <rect x="290" y="60" width="40" height="160"/>
+            </g>
+            <line x1="20" y1="220" x2="360" y2="220" stroke="#1F3864" stroke-width="1.5"/>
+            <circle cx="340" cy="40" r="18" fill="none" stroke="#2E5597" stroke-width="2"/>
+            <path d="M 333 40 L 338 45 L 348 35" stroke="#2E5597" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="post-body">
+          <div class="post-meta"><span>BI &amp; ADOPCIÓN</span><span class="dot">·</span><span>8 MIN</span></div>
+          <h3>Por qué tu dashboard no se usa (y qué hacer al respecto).</h3>
+          <p class="post-excerpt">Dashboards preciosos que nadie abre. Un chequeo de cinco puntos que predice, antes de construir, si el tablero va a vivir o morir.</p>
+          <a class="post-link" href="blog/por-que-tu-dashboard-no-se-usa.html">Leer más →</a>
+        </div>
+      </article>
+
+      <article class="post reveal d2">
+        <div class="post-cover">
+          <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="250" fill="#F2F2F2"/>
+            <rect x="40" y="60" width="90" height="130" fill="#fff" stroke="#BFBFBF"/>
+            <g stroke="#8C8C8C" stroke-width="1">
+              <line x1="50" y1="80" x2="120" y2="80"/>
+              <line x1="50" y1="95" x2="120" y2="95"/>
+              <line x1="50" y1="110" x2="120" y2="110"/>
+              <line x1="50" y1="125" x2="120" y2="125"/>
+              <line x1="50" y1="140" x2="120" y2="140"/>
+              <line x1="50" y1="155" x2="120" y2="155"/>
+              <line x1="50" y1="170" x2="120" y2="170"/>
+              <line x1="75" y1="65" x2="75" y2="185"/>
+              <line x1="95" y1="65" x2="95" y2="185"/>
+            </g>
+            <path d="M 160 125 L 220 125" stroke="#1F3864" stroke-width="2" marker-end="url(#arr)" fill="none"/>
+            <defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#1F3864"/></marker></defs>
+            <rect x="240" y="60" width="120" height="130" rx="6" fill="#1F3864"/>
+            <rect x="252" y="78" width="40" height="32" rx="2" fill="#7BA7E1" opacity=".5"/>
+            <rect x="296" y="78" width="52" height="32" rx="2" fill="#7BA7E1" opacity=".3"/>
+            <rect x="252" y="118" width="96" height="6" rx="2" fill="rgba(255,255,255,.4)"/>
+            <rect x="252" y="132" width="70" height="6" rx="2" fill="rgba(255,255,255,.3)"/>
+            <rect x="252" y="146" width="80" height="6" rx="2" fill="rgba(255,255,255,.3)"/>
+            <rect x="252" y="164" width="60" height="16" rx="3" fill="#7BA7E1"/>
+          </svg>
+        </div>
+        <div class="post-body">
+          <div class="post-meta"><span>PLATAFORMAS</span><span class="dot">·</span><span>10 MIN</span></div>
+          <h3>De Excel a plataforma: cuándo vale la pena dar el salto.</h3>
+          <p class="post-excerpt">Excel es increíblemente poderoso. Hasta que deja de serlo. Las cinco señales que indican que llegó el momento de construir un sistema real.</p>
+          <a class="post-link" href="blog/de-excel-a-plataforma.html">Leer más →</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="blog-footer reveal">
+      <a href="blog/index.html">Ver todos los artículos <span>→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7b. About ============ -->
+<section class="sec about-section">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">07 — Sobre Data Impact</p>
+      <h2>Una empresa chilena con antecedentes formales.</h2>
+    </div>
+
+    <div class="about">
+      <div class="about-text">
+        <p class="reveal">DATA IMPACT BUSINESS SOLUTIONS SPA es una empresa chilena especializada en tecnología, analítica de datos y desarrollo de soluciones digitales a medida. La compañía se encuentra respaldada por un equipo profesional con más de 12 años de trayectoria acreditada en el diseño e implementación de soluciones tecnológicas para organizaciones de los sectores salud, educación superior, servicios financieros, retail, construcción y operaciones en terreno.</p>
+        <p class="reveal d1">Nuestra propuesta de valor se fundamenta en la capacidad de traducir requerimientos de negocio en soluciones técnicas concretas, funcionales y sostenibles en el tiempo, asegurando su efectiva adopción por parte de los equipos usuarios y la generación de resultados medibles para la organización.</p>
+        <p class="reveal d2">Las áreas de servicio que la empresa ofrece comprenden: inteligencia de negocios y reportería ejecutiva; ingeniería de datos e integración de sistemas; automatización de procesos de negocio; inteligencia artificial aplicada; y desarrollo de plataformas web y móviles a medida. Todos los servicios se ejecutan aplicando buenas prácticas de gobierno de datos, gestión de accesos y seguridad de la información, en línea con estándares reconocidos de la industria.</p>
+      </div>
+
+      <aside class="about-card reveal d1">
+        <h4>Datos formales</h4>
+        <dl>
+          <div><dt>Razón social</dt><dd>DATA IMPACT BUSINESS SOLUTIONS SPA</dd></div>
+          <div><dt>RUT</dt><dd>78.000.816-4</dd></div>
+          <div><dt>Domicilio fiscal</dt><dd>Antonio Bellet 193, Of. 1210<br>Providencia, Santiago</dd></div>
+        </dl>
+        <div class="seals">
+          <div class="seal">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Inscrito en Registro de Proveedores de ChileCompra</span>
+          </div>
+          <div class="seal">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Proveedor habilitado para organismos del Estado de Chile</span>
+          </div>
+        </div>
+        <a href="brief-institucional.html" class="brief-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          <span>Descargar brief institucional</span>
+          <svg class="ext" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7c. Stack Tecnológico ============ -->
+<section class="sec" id="stack" style="padding-top: 40px; background: var(--bg-alt);">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">07c — Stack tecnológico</p>
+      <h2>Herramientas que usamos, no las que vendemos.</h2>
+      <p>Elegimos según el problema. Estas son las que aparecen con más frecuencia en nuestros proyectos.</p>
+    </div>
+    <div class="stack-grid reveal d1">
+      <div class="stack-col">
+        <div class="stack-lbl">BI &amp; Visualización</div>
+        <ul class="stack-list"><li>Power BI</li><li>Tableau</li><li>Looker Studio</li><li>Metabase</li></ul>
+      </div>
+      <div class="stack-col">
+        <div class="stack-lbl">Datos &amp; Cloud</div>
+        <ul class="stack-list"><li>Azure</li><li>Snowflake</li><li>BigQuery</li><li>PostgreSQL</li><li>dbt</li></ul>
+      </div>
+      <div class="stack-col">
+        <div class="stack-lbl">Desarrollo</div>
+        <ul class="stack-list"><li>React / Next.js</li><li>Node · FastAPI</li><li>Python</li><li>React Native / PWA</li></ul>
+      </div>
+      <div class="stack-col">
+        <div class="stack-lbl">IA &amp; Automatización</div>
+        <ul class="stack-list"><li>Azure OpenAI</li><li>Cognitive Search</li><li>n8n · Make</li><li>Power Automate</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7d. ROI Calculator ============ -->
+<section class="sec" id="calculadora" style="padding-top: 40px;">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">07d — Calculadora</p>
+      <h2>¿Cuántas horas pierdes en reportería manual?</h2>
+      <p>Una estimación rápida de lo que cuesta seguir armando reportes a mano. Ajusta las variables.</p>
+    </div>
+    <div class="roi reveal d1">
+      <div class="roi-inputs">
+        <label class="roi-field">
+          <span>Personas que arman reportes</span>
+          <input type="range" id="roi-people" min="1" max="20" value="3" step="1"/>
+          <output id="roi-people-v">3</output>
+        </label>
+        <label class="roi-field">
+          <span>Horas/semana por persona en reportería</span>
+          <input type="range" id="roi-hours" min="1" max="40" value="8" step="1"/>
+          <output id="roi-hours-v">8</output>
+        </label>
+        <label class="roi-field">
+          <span>Costo hora del analista (CLP)</span>
+          <input type="range" id="roi-rate" min="8000" max="40000" value="18000" step="500"/>
+          <output id="roi-rate-v">$18.000</output>
+        </label>
+      </div>
+      <div class="roi-results">
+        <div class="roi-r"><div class="l">HORAS AL MES</div><div class="v" id="roi-hm">96 h</div></div>
+        <div class="roi-r"><div class="l">COSTO ANUAL</div><div class="v" id="roi-ca">$20.7M</div></div>
+        <div class="roi-r highlight"><div class="l">AHORRO ESTIMADO AL AUTOMATIZAR (70%)</div><div class="v" id="roi-save">$14.5M / año</div></div>
+        <a href="#contacto" class="btn btn-primary" style="margin-top: 16px; width: 100%; justify-content: center;">
+          Evaluar con un especialista
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <p class="roi-note">Cálculo indicativo. Automatizaciones reales suelen lograr 60-85% de reducción.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7e. FAQ ============ -->
+<section class="sec" id="faq" style="padding-top: 40px;">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">07e — Preguntas frecuentes</p>
+      <h2>Lo que suelen preguntarnos antes de empezar.</h2>
+    </div>
+    <div class="faq-list reveal d1">
+      <details class="faq-item"><summary><span>¿Trabajan con licitaciones de Mercado Público?</span><i></i></summary><div class="faq-a">Sí. Estamos inscritos en el Registro de Proveedores de ChileCompra y habilitados para contratar con organismos del Estado. Preparamos propuestas técnicas, económicas y documentación exigida por las bases.</div></details>
+      <details class="faq-item"><summary><span>¿Cuánto demora un dashboard desde cero?</span><i></i></summary><div class="faq-a">Un MVP con datos conectados y 3-5 indicadores clave toma típicamente entre 3 y 6 semanas. Un ecosistema completo con múltiples fuentes, capa semántica y gobierno puede extenderse a 3-4 meses.</div></details>
+      <details class="faq-item"><summary><span>¿Usan cloud, on-prem o ambos?</span><i></i></summary><div class="faq-a">Ambos. La mayoría de proyectos nuevos van a Azure, Snowflake o BigQuery, pero mantenemos y migramos implementaciones on-prem cuando el contexto lo requiere (regulatorio, operacional o de costos).</div></details>
+      <details class="faq-item"><summary><span>¿Se hacen cargo del hosting y la operación post-entrega?</span><i></i></summary><div class="faq-a">Sí, como servicio opcional. Ofrecemos soporte y monitoreo por SLA mensual, o podemos traspasar la operación al equipo interno con documentación y capacitación.</div></details>
+      <details class="faq-item"><summary><span>¿Trabajan bajo contrato fijo o time &amp; materials?</span><i></i></summary><div class="faq-a">Depende del alcance. Proyectos definidos van a precio cerrado por fases. Acompañamientos continuos y consultoría funcionan en bloques mensuales de horas o días.</div></details>
+      <details class="faq-item"><summary><span>¿Qué pasa con la propiedad del código y los datos?</span><i></i></summary><div class="faq-a">Todo el código desarrollado a medida queda de propiedad del cliente. Los datos nunca salen de sus ambientes sin autorización explícita. Firmamos NDA al inicio de cada proyecto.</div></details>
+      <details class="faq-item"><summary><span>¿Cuándo conviene IA y cuándo no?</span><i></i></summary><div class="faq-a">IA conviene cuando el problema es de escala, ambigüedad lingüística o patrones no-obvios. Para reglas claras, cálculos determinísticos o reportería estructurada, una solución tradicional suele ser más barata, rápida y confiable.</div></details>
+      <details class="faq-item"><summary><span>¿Cómo se factura?</span><i></i></summary><div class="faq-a">Emitimos factura electrónica chilena. Para sector público, emitimos según lo establecido en la Orden de Compra del portal Mercado Público.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. Contact ============ -->
+<section class="sec" id="contacto">
+  <div class="container">
+    <div class="sec-head reveal">
+      <p class="eyebrow">08 — Contacto</p>
+      <h2>Conversemos tu proyecto.</h2>
+      <p>Dos caminos, misma bandeja. Contamos con respuesta dentro de 24 horas hábiles.</p>
+    </div>
+
+    <div class="contact">
+      <!-- Form -->
+      <form class="form reveal" id="contact-form" action="/api/contact" method="post" novalidate>
+        <div class="form-grid">
+          <div class="field"><label>Nombre</label><input name="nombre" required placeholder="Tu nombre"/></div>
+          <div class="field"><label>Email corporativo</label><input name="email" type="email" required placeholder="nombre@empresa.cl"/></div>
+          <div class="field"><label>Empresa</label><input name="empresa" placeholder="Tu empresa"/></div>
+          <div class="field"><label>Cargo</label><input name="cargo" placeholder="Rol o cargo"/></div>
+        </div>
+        <div class="field full">
+          <label>Tipo de consulta</label>
+          <select name="tipo" required>
+            <option value="">Selecciona una opción</option>
+            <option>Nuevo proyecto</option>
+            <option>Asesoría</option>
+            <option>Consultoría</option>
+            <option>Licitación pública</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label>Descripción breve</label>
+          <textarea name="descripcion" placeholder="Cuéntanos en dos o tres líneas qué problema quieres resolver."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submit-btn">
+          <span id="submit-text">Enviar mensaje</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+      </form>
+
+      <!-- Direct -->
+      <div class="contact-side">
+        <div class="calendly reveal d1">
+          <div class="calendly-head">
+            <div class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <div>
+              <div class="t">O agenda directamente</div>
+              <div class="s">Bloques de 30 min · zona horaria CL</div>
+            </div>
+          </div>
+          <div class="slots" id="slots"></div>
+          <div class="calendly-note">// integración calendly · /dataimpact/30min</div>
+        </div>
+
+        <div class="contact-direct reveal d2">
+          <a class="contact-item" href="mailto:ngonzalez@dataimpact.cl">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div><div class="l">EMAIL</div><div class="v">ngonzalez@dataimpact.cl</div></div>
+          </a>
+          <a class="contact-item" href="tel:+56949848853">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+            <div><div class="l">TELÉFONO</div><div class="v">+56 9 4984 8853</div></div>
+          </a>
+          <a class="contact-item" href="#">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <div><div class="l">LINKEDIN</div><div class="v">/company/dataimpact</div></div>
+          </a>
+          <a class="contact-item" href="https://maps.google.com" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><div class="l">OFICINA</div><div class="v">Antonio Bellet 193, Of. 1210 · Providencia</div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="foot">
+      <div class="foot-logo">
+        <a href="#top" class="logo" aria-label="Data Impact Business Solutions">
+          <img src="assets/logo-solutions-light.png" alt="Data Impact Solutions" class="foot-logo-img" />
+        </a>
+        <p>Tecnología, datos e IA aplicados a los problemas reales de tu negocio.</p>
+      </div>
+      <div>
+        <h5>Servicios</h5>
+        <ul>
+          <li><a href="#servicios">Business Intelligence</a></li>
+          <li><a href="#servicios">Ingeniería de Datos</a></li>
+          <li><a href="#servicios">Automatización</a></li>
+          <li><a href="#servicios">IA Aplicada</a></li>
+          <li><a href="#servicios">Plataformas a medida</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Sectores</h5>
+        <ul>
+          <li><a href="#sectores">Salud &amp; Farmacéutica</a></li>
+          <li><a href="#sectores">Educación Superior</a></li>
+          <li><a href="#sectores">Servicios Financieros</a></li>
+          <li><a href="#sectores">Construcción</a></li>
+          <li><a href="#sectores">Sector Público</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Empresa</h5>
+        <ul>
+          <li><a href="#casos">Casos</a></li>
+          <li><a href="#metodologia">Metodología</a></li>
+          <li><a href="#consultoria">Consultoría</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Términos de servicio</a></li>
+          <li><a href="#">Mercado Público</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Data Impact Business Solutions SpA · RUT 78.000.816-4 · Providencia, Santiago, Chile</span>
+      <div class="social">
+        <a href="#" aria-label="LinkedIn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8 19H5V8h3v11zM6.5 6.7A1.8 1.8 0 118.3 4.9a1.8 1.8 0 01-1.8 1.8zM20 19h-3v-5.6c0-3.4-4-3.1-4 0V19h-3V8h3v1.8c1.4-2.6 7-2.8 7 2.5V19z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ Tweaks Panel ============ -->
+<div id="tweaks">
+  <h4>Tweaks <span id="tweaks-close" style="cursor:pointer;font-size:14px;opacity:.5;">×</span></h4>
+
+  <div class="row">
+    <label>Tema</label>
+    <div class="seg" id="theme-seg">
+      <button data-theme-set="light">Claro</button>
+      <button data-theme-set="dark">Oscuro</button>
+      <button data-theme-set="system">Sistema</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <label>Variante H1</label>
+    <button class="h1-opt" data-h1="Datos que se convierten en <em>decisiones</em>.<br>Decisiones que se convierten en resultados.">Datos → decisiones → resultados</button>
+    <button class="h1-opt" data-h1="Tecnología, datos e <em>IA aplicada</em><br>a los problemas reales de tu negocio.">Tecnología, datos e IA aplicada</button>
+    <button class="h1-opt" data-h1="Soluciones de datos, BI e IA<br><em>hechas para adoptarse</em>.">Hechas para adoptarse</button>
+  </div>
+
+  <div class="row">
+    <label>Acento</label>
+    <div class="swatches">
+      <div class="sw" data-accent="#2E5597" style="background:#2E5597"></div>
+      <div class="sw" data-accent="#1F3864" style="background:#1F3864"></div>
+      <div class="sw" data-accent="#0b3a6f" style="background:#0b3a6f"></div>
+      <div class="sw" data-accent="#3b6bb0" style="background:#3b6bb0"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Case detail modal -->
+<dialog id="case-modal" class="case-modal" aria-labelledby="case-modal-title">
+  <div class="case-modal-head">
+    <span class="tag" id="case-modal-tag">Caso</span>
+    <button class="case-modal-close" type="button" aria-label="Cerrar">×</button>
+  </div>
+  <div class="case-modal-body" id="case-modal-body"></div>
+</dialog>
+
+<script src="assets/js/main.js" defer></script>
+
+</body>
+</html>
