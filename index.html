@@ -847,7 +847,9 @@
 
     <div class="contact">
       <!-- Form -->
-      <form class="form reveal" id="contact-form" action="/api/contact" method="post" novalidate>
+      <form class="form reveal" id="contact-form" name="contacto" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="contacto"/>
+        <p style="position:absolute;left:-9999px" aria-hidden="true"><label>No llenar: <input name="bot-field"/></label></p>
         <div class="form-grid">
           <div class="field"><label>Nombre</label><input name="nombre" required placeholder="Tu nombre"/></div>
           <div class="field"><label>Email corporativo</label><input name="email" type="email" required placeholder="nombre@empresa.cl"/></div>

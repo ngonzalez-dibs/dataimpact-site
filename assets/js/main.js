@@ -40,19 +40,33 @@
   const form = document.getElementById('contact-form');
   const btn = document.getElementById('submit-btn');
   const btnText = document.getElementById('submit-text');
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (!form.checkValidity()) {
       form.reportValidity();
       return;
     }
-    btn.classList.add('sent');
-    btnText.textContent = 'Mensaje enviado ✓';
+    btn.disabled = true;
+    btnText.textContent = 'Enviando…';
+    const body = new URLSearchParams(new FormData(form)).toString();
+    try {
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body
+      });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      btn.classList.add('sent');
+      btnText.textContent = 'Mensaje enviado ✓';
+      form.reset();
+    } catch (err) {
+      btnText.textContent = 'Error, intenta de nuevo';
+    }
     setTimeout(() => {
       btn.classList.remove('sent');
+      btn.disabled = false;
       btnText.textContent = 'Enviar mensaje';
-      form.reset();
-    }, 3200);
+    }, 3500);
   });
 
   // ==== Tweaks ====
